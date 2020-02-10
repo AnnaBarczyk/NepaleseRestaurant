@@ -1,0 +1,553 @@
+/* Extra small devices - xs (portrait phones, less than 576px) */
+@media (max-width: 575px) { 
+
+/* Responsive Image Styles Starts */
+
+	#logo .img-fluid, 
+	.col3-banners .img-fluid, 
+	.col2-banners .img-fluid, 
+	.product-col .img-fluid {
+		margin: 0 auto;
+	}
+
+/* Cart Style Starts */	
+
+	#cart .btn {
+		padding: 5px 0;
+		text-align: center;
+	}		
+
+/* Main Menu Styles Starts */
+
+	#main-menu .navbar-toggle {
+		color: #fff;
+	}
+	#main-menu .navbar-toggle:focus {
+		color: #ec2f2f;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+				box-shadow: none;
+	}
+	#main-menu .navbar-collapse {
+		border-top: 1px solid #585858;
+	}
+		#main-menu .navbar-nav > .nav-item > a {
+			padding: 8px;
+		}
+		#main-menu .dropdown-menu > a.dropdown-item {
+			padding: 4px;
+		}
+		#main-menu .dropdown-inner, 
+		#main-menu .dropdown-inner ul {
+			display: block;
+		}
+		#main-menu .dropdown-menu, 
+		#main-menu .dropdown-inner, 
+		#main-menu .dropdown-inner ul {
+			text-align: center;
+		}
+
+/* Header Links Styles Starts */
+
+	ul.header-links {
+		margin-bottom: 10px;
+	}
+	
+/* Currency & Languages Drop Down Styles Starts */
+
+	.header-top .float-left {
+		float: none !important;
+		text-align: center;
+	}
+		.header-top .btn-link {
+			margin-bottom: 10px;
+		}
+		.header-top .dropdown-menu {
+			text-align: left;
+		}
+		
+/* Main Header Styles Starts */
+
+	.main-header h5 {
+		margin-top: 0;
+	}
+
+/* Logo Style Starts */
+
+	#logo {
+		margin-top: 25px;
+		margin-bottom: 20px;
+	}
+
+/* Latest Products Styles Starts */
+
+	.product-head, .product-col {
+		text-align: center;
+	}
+		.product-col.list .image {
+			padding: 0;
+			float: none;
+		}
+	
+/* Product Carousel Styles Starts */	
+
+	.product-head {
+		font-size: 18px;
+	}
+	#owl-product .owl-controls .owl-buttons .owl-prev, 
+	#owl-product .owl-controls .owl-buttons .owl-next {
+		top: -56px;
+		font-size: 20px;
+	}
+	.product-carousel .owl-controls .owl-buttons .owl-prev {
+		left: 15px;
+	}	 
+	.product-carousel .owl-controls .owl-buttons .owl-next {
+		right: 20px;
+	}		
+		
+/* Three Column Banner Styles Starts */
+
+	.col3-banners {
+		margin-bottom: 10px;
+	}
+		.col3-banners li + li {
+			margin-top: 20px;
+		}
+
+/* Two Column Banner Styles Starts */
+
+	.col2-banners {
+		margin-bottom: 10px;
+	}
+		.col2-banners li + li {
+			margin-top: 20px;
+		}		
+	
+/* Page Content Styles Starts */
+
+	.page-box h3 {
+		margin-top: 20px;
+	}		
+
+/* Tabs Styles Starts */
+
+	.tabs-panel .nav-tabs > li {
+		display: block;
+		float: none;
+	}
+
+/* Pagination Styles Starts */
+
+	.pagination-block {
+		text-align: center;
+	}
+		.pagination {
+			margin-bottom: 10px; 
+		}
+	.results {
+		padding-top: 0;
+		margin-bottom: 15px;
+		text-align: center;
+	}	
+
+/* Footer Links Styles Starts */
+
+	#footer-area .foot-sm-links {
+		margin-bottom: 20px;
+	}
+	.footer-links .last h4.lead {
+		font-size: 18px;
+	}
+	.footer-links h5 {
+		margin: 10px 0;
+	}
+
+/* Copyright Styles Starts */
+
+	.copyright {
+		font-size: 11px;
+	}
+		.copyright p.float-left, 
+		.copyright ul {
+			text-align: center;
+			float: none !important;
+		}
+			.copyright li {
+				padding: 0 2px;
+			}		
+
+/* Footer Links Styles Starts */
+
+	.footer-links .col-12 {
+		margin-bottom: 20px;
+	}
+	#footer-area .foot-sm-links {
+		margin-bottom: 30px;
+	}
+
+/* Generic Styles Starts */
+
+	.d-xs-block {
+		display: block !important;
+	}
+	.d-xs-none {
+		display: none;
+	}
+	.img-center-xs {
+		margin-left: auto;
+		margin-right: auto;
+	}	
+
+	.text-xs-left   { text-align: left;   }
+	.text-xs-center { text-align: center; }
+	.text-xs-right  { text-align: right;  }			
+
+}
+
+/* Small devices - sm (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) { 
+
+/* Responsive Image Styles Starts */
+
+	#logo .img-fluid, 
+	.col3-banners .img-fluid, 
+	.col2-banners .img-fluid, 
+	.product-col .img-fluid {
+		margin: 0 auto;
+	}
+
+/* Cart Style Starts */	
+
+	#cart .btn {
+		padding: 5px 0;
+		text-align: center;
+	}	
+
+/* Main Menu Styles Starts */
+
+	#main-menu .navbar-toggle {
+		color: #fff;
+	}
+	#main-menu .navbar-toggle:focus {
+		color: #ec2f2f;
+		-webkit-box-shadow: none;
+		   -moz-box-shadow: none;
+				box-shadow: none;
+	}
+	#main-menu .navbar-collapse {
+		border-top: 1px solid #585858;
+	}
+		#main-menu .navbar-nav > .nav-item > a {
+			padding: 10px;
+		}
+		#main-menu .dropdown-menu > a.dropdown-item {
+			padding: 6px;
+		}
+	#main-menu .dropdown-inner, 
+	#main-menu .dropdown-inner ul {
+		display: block;
+	}
+	#main-menu .dropdown-menu, 
+	#main-menu .dropdown-inner, 
+	#main-menu .dropdown-inner ul {
+		text-align: center;
+	}
+
+/* Header Links Styles Starts */
+
+	ul.header-links {
+		margin-bottom: 10px;
+	}
+	
+/* Currency & Languages Drop Down Styles Starts */
+
+	.header-top .float-left {
+		float: none !important;
+		text-align: center;
+	}
+		.header-top .btn-link {
+			margin-bottom: 10px;
+		}
+		.header-top .dropdown-menu {
+			text-align: left;
+		}
+		
+/* Main Header Styles Starts */
+
+	.main-header h5 {
+		margin-top: 0;
+	}
+
+/* Logo Style Starts */
+
+	#logo {
+		margin-top: 25px;
+		margin-bottom: 20px;
+	}
+
+/* Latest Products Styles Starts */
+
+	.product-head, .product-col {
+		text-align: center;
+	}
+		.product-col.list .image {
+			padding: 0;
+			float: none;
+		}
+	
+/* Product Carousel Styles Starts */	
+
+	.product-head {
+		font-size: 18px;
+	}
+	#owl-product .owl-controls .owl-buttons .owl-prev, 
+	#owl-product .owl-controls .owl-buttons .owl-next {
+		top: -56px;
+		font-size: 20px;
+	}
+	.product-carousel .owl-controls .owl-buttons .owl-prev {
+		left: 15px;
+	}	 
+	.product-carousel .owl-controls .owl-buttons .owl-next {
+		right: 20px;
+	}		
+		
+/* Three Column Banner Styles Starts */
+
+	.col3-banners {
+		margin-bottom: 10px;
+	}
+		.col3-banners li + li {
+			margin-top: 20px;
+		}
+
+/* Two Column Banner Styles Starts */
+
+	.col2-banners {
+		margin-bottom: 10px;
+	}
+		.col2-banners li + li {
+			margin-top: 20px;
+		}		
+	
+/* Page Content Styles Starts */
+
+	.page-box h3 {
+		margin-top: 20px;
+	}		
+
+/* Tabs Styles Starts */
+
+	.tabs-panel .nav-tabs > li {
+		display: block;
+		float: none;
+	}
+
+/* Pagination Styles Starts */
+
+	.pagination-block {
+		text-align: center;
+	}
+		.pagination {
+			margin-bottom: 10px; 
+		}
+	.results {
+		padding-top: 0;
+		margin-bottom: 15px;
+		text-align: center;
+	}	
+
+/* Footer Links Styles Starts */
+
+	#footer-area .foot-sm-links {
+		margin-bottom: 20px;
+	}
+	.footer-links .last h4.lead {
+		font-size: 18px;
+	}
+	.footer-links h5 {
+		margin: 10px 0;
+	}
+
+/* Copyright Styles Starts */
+
+	.copyright {
+		font-size: 11px;
+	}
+		.copyright p.float-left, 
+		.copyright ul {
+			text-align: center;
+			float: none !important;
+		}
+			.copyright li {
+				padding: 0 2px;
+			}	
+
+/* Generic Styles Starts */
+
+	.img-center-sm {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}
+
+/* Medium devices - md (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) { 
+
+/* Main Menu Styles Starts */
+
+	#main-menu .container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	#main-menu .navbar-collapse.collapse {
+		display: inline-block !important;
+	}
+	#main-menu .navbar-nav > li > a {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+/* Products Box Styles */
+
+	.product-col.list .image {
+		padding: 40px 30px 10px 0;
+	}	
+
+/* Product Carousel Styles Starts */	
+
+	.product-carousel .row {
+		margin-left: -3px;
+		margin-right: -3px;
+	}
+		.product-carousel .col-12 {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.product-carousel #owl-product .item {
+			padding-left: 3px;
+			padding-right: 3px;
+			text-align: center;
+		}
+		.product-carousel .owl-controls .owl-buttons .owl-prev {
+			left: 86%;
+		}		
+
+/* Side Products Lists Styles Starts */
+
+	.side-products-list h5,
+	.side-products-list .price {
+		float: none;
+	}
+
+/* Pagination Styles Starts */
+
+	.pagination {
+		margin-bottom: 15px; 
+	}
+	.results {	
+		padding-top: 5px;
+	}
+
+/* Footer Links Styles Starts */
+
+	#footer-area .foot-sm-links {
+		margin-bottom: 20px;
+	}
+	.footer-links h5 {
+		margin: 10px 0;
+	}
+
+/* Copyright Styles Starts */
+
+	.copyright {
+		font-size: 12px;
+	}
+		.copyright p.float-left, 
+		.copyright ul {
+			text-align: center;
+			float: none !important;
+		}	
+	
+/* Generic Styles Starts */
+
+	.img-center-md {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}
+
+/* Large devices - lg (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) { 
+
+/* Main Menu Styles Starts */
+
+	#main-menu .container {
+		padding-left: 0;
+		padding-right: 0;
+	}	
+	#main-menu .navbar-collapse.collapse {
+		display: inline-block !important;
+	}	
+	
+/* Products Box Styles */
+
+	.product-col.list .image {
+		padding: 40px 30px 10px 0;
+	}
+	.product-col .btn-cart {
+		margin-top: 5px;
+	}
+
+/* Product Carousel Styles Starts */	
+
+	.product-carousel .owl-controls .owl-buttons .owl-prev {
+		left: 89%;
+	}		
+
+/* Footer Links Styles Starts */
+
+	.footer-links h5 {
+		margin: 10px 0;
+	}
+
+/* Copyright Styles Starts */
+
+	.copyright {
+		font-size: 13px;
+	}
+		.copyright p.float-left, 
+		.copyright ul {
+			text-align: center;
+			float: none !important;
+		}	
+
+/* Generic Styles Starts */
+
+	.img-center-lg {
+		margin-left: auto;
+		margin-right: auto;
+	}	
+
+}
+
+/* Extra large devices - xl (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+/* Main Menu Styles Starts */
+
+	#main-menu .container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+		#main-menu .navbar-collapse.collapse {
+			display: inline-block !important;
+		}	
+		#main-menu .dropdown:hover .dropdown-menu {
+			display: block;
+		}
+
+}

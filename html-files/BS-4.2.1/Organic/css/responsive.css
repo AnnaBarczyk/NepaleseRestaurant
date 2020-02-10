@@ -1,0 +1,281 @@
+/* Extra small devices - xs (portrait phones, less than 576px) */
+@media (max-width: 575px) { 
+
+/* Navbar Styles Starts */
+
+	#nav .navbar-toggler {
+		margin-top: 6px;
+		padding: 0;
+		border: none;
+		background: none;
+	}
+	#nav .navbar-toggler span {
+		color: #333;
+	}
+	#nav .navbar-toggler:hover span {
+		color: #2eb0c0;
+	}
+	#nav .navbar-toggler:focus {
+		outline: none;
+	}
+	#nav .navbar-collapse {
+		border-top: 1px solid #b1b1b1;
+	}
+		#nav .nav-item > a {
+			padding: 10px;
+		}	
+
+/* Footer Styles Starts */
+		
+	.foot-sm-links li + li {
+		margin-left: 5px;
+	}
+	.foot-head {
+		padding: 20px;
+		font-size: 16px;
+	}
+		.foot-head .fa {
+			margin-right: 10px;
+			font-size: 18px;
+		}	
+
+/* Generic Styles Starts */
+
+	.d-xs-block {
+		display: block !important;
+	}
+	.d-xs-none {
+		display: none;
+	}
+	.img-center-xs {
+		margin-left: auto;
+		margin-right: auto;
+	}	
+
+	.text-xs-left   { text-align: left;   }
+	.text-xs-center { text-align: center; }
+	.text-xs-right  { text-align: right;  }			
+
+}
+
+/* Small devices - sm (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767px) {
+	
+/* Navbar Styles Starts */
+
+	#nav .navbar-toggler {
+		margin-top: 7px;
+		padding: 0;
+		border: none;
+		background: none;
+	}
+	#nav .navbar-toggler span {
+		color: #333;
+	}
+	#nav .navbar-toggler:hover span {
+		color: #2eb0c0;
+	}
+	#nav .navbar-toggler:focus {
+		outline: none;
+	}
+	#nav .navbar-collapse {
+		border-top: 1px solid #b1b1b1;
+	}
+		#nav .nav-item > a {
+			padding: 10px;
+		}
+
+/* Section Styles Starts */
+
+	.section-main-heading span:before, 
+	.section-main-heading span:after {
+		display: none;
+	}
+
+/* Articles Section Styles Starts */
+
+	#article-carousel .owl-controls .owl-buttons .owl-prev, 
+	#article-carousel .owl-controls .owl-buttons .owl-next {
+		font-size: 40px;
+	}	
+
+/* Order Section Styles Starts */
+
+	.order-section h1 {
+		font-size: 50px;
+	}		
+
+/* Generic Styles Starts */
+
+	.img-center-sm {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}
+
+/* Medium devices - md (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) { 
+
+/* Navigation Styles Starts */
+
+	#nav .nav-item > a {
+		margin-top: -6px;
+		padding: 0 8px;
+		font-size: 16px;
+	}
+
+/* Slider Styles Starts */
+
+	#main-slider .carousel-caption {
+		left: 10%;
+	}
+		#main-slider .carousel-caption > .row > div {
+			padding: 25px;
+		}
+			#main-slider .carousel-caption > .row > div h1 {
+				font-size: 50px;
+			}
+			#main-slider .carousel-caption > .row > div h4 {
+				margin-bottom: 0;
+				font-size: 20px;
+			}
+			#main-slider .carousel-caption > .row > div .btn {
+				padding: 8px 36px;
+				font-size: 20px;
+			}
+
+/* Articles Section Styles Starts */
+
+	#article-carousel .owl-controls .owl-buttons .owl-prev, 
+	#article-carousel .owl-controls .owl-buttons .owl-next {
+		font-size: 50px;
+	}
+
+/* Gallery Section Styles Starts */
+
+	.gallery-item .overlay .inner {
+			margin: 10px;
+			padding: 10px;
+			height: auto;
+			font-size: 12px;
+			border: none;
+		}
+			.gallery-item .overlay .inner h4 {
+				margin-bottom: 10px;
+				font-size: 18px;
+			}
+			.gallery-item .overlay .inner p {
+				display: none;
+			}
+		
+/* Order Section Styles Starts */
+
+	.order-section h1 {
+		margin-bottom: 20px;
+		font-size: 42px;
+	}
+	.order-section .lead {
+		font-size: 16px;
+		line-height: 24px;
+	}
+		.features-list li {
+			line-height: 18px;
+		}
+			.features-list li .fa {
+				margin-top: 30px;
+				margin-bottom: 90px;
+				font-size: 36px;
+			}
+			.features-list li h4 {
+				font-size: 20px;
+			}
+	.order-now-form {
+		margin-top: 10px;
+	}	
+	
+/* Generic Styles Starts */
+
+	.img-center-md {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+}
+
+/* Large devices - lg (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) { 
+
+/* Slider Styles Starts */
+
+	#main-slider .carousel-caption > .row > div {
+		padding: 25px;
+	}
+		#main-slider .carousel-caption > .row > div h1 {
+			font-size: 60px;
+		}
+
+/* Articles Section Styles Starts */
+
+	#article-carousel .owl-controls .owl-buttons .owl-prev, 
+	#article-carousel .owl-controls .owl-buttons .owl-next {
+		font-size: 60px;
+	}
+
+/* Gallery Section Styles Starts */
+
+	.gallery-item .overlay .inner {
+		padding: 10px;
+		font-size: 12px;
+	}
+		.gallery-item .overlay .inner h4 {
+			margin-bottom: 10px;
+			font-size: 22px;
+		}
+	
+/* Order Section Styles Starts */
+
+	.order-section h1 {
+		font-size: 54px;
+	}
+	.order-section .lead {
+		font-size: 16px;
+		line-height: 24px;
+	}
+		.features-list li .fa {
+			margin-bottom: 60px;
+		}	
+
+/* Generic Styles Starts */
+
+	.img-center-lg {
+		margin-left: auto;
+		margin-right: auto;
+	}	
+
+}
+
+/* Extra large devices - xl (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+/* Navigation Styles Starts */
+
+	#nav .nav-item {
+		margin-top: 2px;
+	}
+
+/* Articles Section Styles Starts */
+
+	#article-carousel .owl-controls .owl-buttons .owl-prev {
+		left: -60px;
+	}
+	#article-carousel .owl-controls .owl-buttons .owl-next {
+		right: -60px;
+	}	
+	#article-carousel .owl-controls .owl-buttons .owl-prev, 
+	#article-carousel .owl-controls .owl-buttons .owl-next {
+		position: absolute;	
+		top: -340px;			
+	}	
+
+}
