@@ -1,0 +1,134 @@
+<!-- Menu Items Listing #1 Section Starts -->
+		<section class="section section-menu-card">
+        <!-- Nested Container Starts -->
+            <div class="container text-xs-center text-sm-center text-md-left">
+            <!-- Nested Row Starts -->
+                <div class="row">
+                <!-- Images Starts -->
+                    <div class="col-md-5 col-sm-12 text-xs-center text-sm-center text-md-left">
+                        <img src="images/menu/image1.jpg" alt="Image" class="img-fluid br-5">
+                    </div>
+                <!-- Images Ends -->
+                <!-- Spacer From Small Screen Starts -->
+                    <div class="w-100 d-xs-block d-sm-block d-md-none">
+                        <div class="spacer-small"></div>
+                    </div>
+                <!-- Spacer From Small Screen Ends -->
+                <!-- Menu Card Starts -->
+                    <div class="col-md-7 col-sm-12">
+                        <h3 class="text-uppercase text-weight-light">Hot Beverages</h3>
+                        <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor nequeu tellus ut eleifend nibh porttitor. Ut in nulla enim hasell moytrirolestie magna lorem.</p>
+                    <!-- Menu Card Listing Starts -->
+                        <ul class="list-unstyled menu-card-list">
+                        <!-- List #1 Starts -->
+                            <li class="row" data-aos="fade-left" data-aos-delay="300" data-aos-once="true">
+                            <!-- Item Thumbnail Starts -->
+                                <div class="col-md-2 col-sm-12">
+                                    <img src="images/menu/image2.jpg" alt="Image" class="img-fluid br-5">
+                                </div>
+                            <!-- Item Thumbnail Ends -->
+                            <!-- Item Details Starts -->
+                                <div class="col-md-10 col-sm-12">
+                                <!-- Title Starts -->								
+                                    <h4 class="clearfix">
+                                        <span class="menu-card-list-title float-left">Strawberry Juice Refresher</span>
+                                        <span class="menu-card-list-price float-right">
+                                            $3.99
+                                        </span>
+                                    </h4>
+                                <!-- Title Ends -->
+                                <!--Description Starts -->
+                                    <p class="text-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Why Because you can't spell deliciously, amazingly refreshing.</p>
+                                <!--Description Ends -->
+                                <!-- Ratings Starts -->
+                                    <ul class="list-unstyled list-inline ratings">
+                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                                    </ul>
+                                <!-- Ratings Ends -->
+                                </div>
+                            <!-- Item Details Ends -->
+                            </li>
+                        <!-- List #1 Ends -->
+                        <!-- List #2 Starts -->
+                            <li class="row" data-aos="fade-left" data-aos-delay="500" data-aos-once="true">
+                            <!-- Item Thumbnail Starts -->
+                                <div class="col-md-2 col-sm-12 text-xs-center text-sm-center text-md-left">
+                                    <img src="images/menu/image2.jpg" alt="Image" class="img-fluid br-5">
+                                </div>
+                            <!-- Item Thumbnail Ends -->
+                            <!-- Item Details Starts -->
+                                <div class="col-md-10 col-sm-12">
+                                <!-- Title Starts -->								
+                                    <h4 class="clearfix">
+                                        <span class="menu-card-list-title float-left">Strawberry Juice Refresher</span>
+                                        <span class="menu-card-list-price float-right">
+                                            $3.99
+                                        </span>
+                                    </h4>
+                                <!-- Title Ends -->
+                                <!--Description Starts -->
+                                    <p class="text-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Why Because you can't spell deliciously, amazingly refreshing.</p>
+                                <!--Description Ends -->
+                                <!-- Ratings Starts -->
+                                    <ul class="list-unstyled list-inline ratings">
+                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                                    </ul>
+                                <!-- Ratings Ends -->
+                                </div>
+                            <!-- Item Details Ends -->
+                            </li>
+                        <!-- List #2 Ends -->
+                        <!-- List #3 Starts -->
+                            <li class="row" data-aos="fade-left" data-aos-delay="700" data-aos-once="true">
+                            <!-- Item Thumbnail Starts -->
+                                <div class="col-md-2 col-sm-12 text-xs-center text-sm-center text-md-left">
+                                    <img src="images/menu/image2.jpg" alt="Image" class="img-fluid br-5">
+                                </div>
+                            <!-- Item Thumbnail Ends -->
+                            <!-- Item Details Starts -->
+                                <div class="col-md-10 col-sm-12">
+                                <!-- Title Starts -->								
+                                    <h4 class="clearfix">
+                                        <span class="menu-card-list-title float-left">Strawberry Juice Refresher</span>
+                                        <span class="menu-card-list-price float-right">
+                                            $3.99
+                                        </span>
+                                    </h4>
+                                <!-- Title Ends -->
+                                <!--Description Starts -->
+                                    <p class="text-weight-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod. Why Because you can't spell deliciously, amazingly refreshing.</p>
+                                <!--Description Ends -->
+                                <!-- Ratings Starts -->
+                                    <ul class="list-unstyled list-inline ratings">
+                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fa fa-star"></i></li>
+                                        <li class="list-inline-item"><i class="fa fa-star-half-o"></i></li>
+                                    </ul>
+                                <!-- Ratings Ends -->
+                                </div>
+                            <!-- Item Details Ends -->
+                            </li>
+                        <!-- List #3 Ends -->
+                        </ul>
+                    <!-- Menu Card Listing Ends -->
+                    </div>
+                <!-- Menu Card Ends -->
+                </div>
+            <!-- Nested Row Ends -->
+            </div>
+        <!-- Nested Container Ends -->
+        </section>
+    <!-- Menu Items Listing #1 Section Ends -->
+    <!-- Spacer Starts -->
+        <div class="spacer-tiny"></div>
+    <!-- Spacer Ends -->
