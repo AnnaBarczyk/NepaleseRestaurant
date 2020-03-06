@@ -10,18 +10,18 @@
 		<title>Sagarmatha Nepal - O nas</title>
 
 		<!-- Bootstrap -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href={{ url_for('static', filename="css/bootstrap.min.css") }} rel="stylesheet">
 
 		<!-- Google Web Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
 
 		<!-- Template CSS Files  -->
-		<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-		<link href="js/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
-		<link href="js/plugins/magnific-popup/magnific-popup.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
-		<link href="css/responsive.css" rel="stylesheet">
+		<link href={{ url_for('static', filename="font-awesome/css/font-awesome.min.css") }} rel="stylesheet">
+		<link href={{ url_for('static', filename="js/plugins/datetimepicker/css/bootstrap-datetimepicker.min.css") }} rel="stylesheet">
+		<link href={{ url_for('static', filename="js/plugins/magnific-popup/magnific-popup.css") }} rel="stylesheet">
+		<link href={{ url_for('static', filename="css/style.css") }} rel="stylesheet">
+		<link href={{ url_for('static', filename="css/responsive.css") }} rel="stylesheet">
 
 	</head>
 	<body>
@@ -53,7 +53,7 @@
 				<div class="container">
 				<!-- Navbar Brand & Toggler Starts -->
 					<a href="index.html" class="navbar-brand">
-						<img src="images/logo.png" alt="Coffee Bingo" class="img-fluid">
+						<img src={{ url_for('static', filename="images/logo.png") }} alt="Coffee_Bingo" class="img-fluid">
 					</a>
 					<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon fa fa-bars"></span>
@@ -86,7 +86,7 @@
                 <div class="row">
                 <!-- Image Starts -->
                     <div class="col-md-5 col-sm-12 text-xs-center text-sm-center text-md-left">
-                        <img src="images/about/image1.jpg" alt="About Image" class="img-fluid br-5 img-style-1">
+                        <img src={{ url_for('static', filename="images/about/image1.jpg") }} alt="About_Image" class="img-fluid br-5 img-style-1">
                     </div>
                 <!-- Image Ends -->
                 <!-- Spacer For Small Screens Starts -->
@@ -136,21 +136,21 @@
                     <div class="carousel-inner" role="listbox">
                     <!-- Item #1 Starts -->
                         <div class="carousel-item active">
-                            <p><img src="images/thumb-img1.jpg" alt="Image" class="img-fluid img-center circle"></p>
+                            <p><img src={{ url_for('static', filename="images/thumb-img1.jpg") }} alt="Image" class="img-fluid img-center circle"></p>
                             <p><em>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley.</em></p>
                             <h6 class="text-weight-bold">Client Name #1</h6>
                         </div>
                     <!-- Item #1 Ends -->
                     <!-- Item #2 Starts -->
                         <div class="carousel-item">
-                            <p><img src="images/thumb-img1.jpg" alt="Image" class="img-fluid img-center circle"></p>
+                            <p><img src={{ url_for('static', filename="images/thumb-img1.jpg") }} alt="Image" class="img-fluid img-center circle"></p>
                             <p><em>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley.</em></p>
                             <h6 class="text-weight-bold">Client Name #2</h6>
                         </div>
                     <!-- Item #2 Ends -->
                     <!-- Item #3 Starts -->
                         <div class="carousel-item">
-                            <p><img src="images/thumb-img1.jpg" alt="Image" class="img-fluid img-center circle"></p>
+                            <p><img src={{ url_for('static', filename="images/thumb-img1.jpg") }} alt="Image" class="img-fluid img-center circle"></p>
                             <p><em>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley.</em></p>
                             <h6 class="text-weight-bold">Client Name #3</h6>
                         </div>
@@ -181,7 +181,7 @@
                 <!-- Bio Box #1 Starts -->
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="bio-box-1">
-                            <img src="images/about/image6.jpg" alt="Profile Image 1" class="img-fluid img-center bio-thumb br-5">
+                            <img src={{ url_for('static', filename="images/about/image6.jpg") }} alt="Profile Image 1" class="img-fluid img-center bio-thumb br-5">
                             <h6 class="text-weight-bold text-uppercase text-spl-color">Robert Dezodana</h6>
                             <p class="text-weight-light">master chef</p>
                         </div>
@@ -190,7 +190,7 @@
                 <!-- Bio Box #2 Starts -->
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="bio-box-1">
-                            <img src="images/about/image7.jpg" alt="Profile Image 2" class="img-fluid img-center bio-thumb br-5">
+                            <img src={{ url_for('static', filename="images/about/image7.jpg") }} alt="Profile Image 2" class="img-fluid img-center bio-thumb br-5">
                             <h6 class="text-weight-bold text-uppercase text-spl-color">Robert Dezodana</h6>
                             <p class="text-weight-light">master chef</p>
                         </div>
@@ -199,7 +199,7 @@
                 <!-- Bio Box #3 Starts -->
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="bio-box-1">
-                            <img src="images/about/image8.jpg" alt="Profile Image 3" class="img-fluid img-center bio-thumb br-5">
+                            <img src={{ url_for('static', filename="images/about/image8.jpg") }} alt="Profile Image 3" class="img-fluid img-center bio-thumb br-5">
                             <h6 class="text-weight-bold text-uppercase text-spl-color">Robert Dezodana</h6>
                             <p class="text-weight-light">master chef</p>
                         </div>
@@ -208,7 +208,7 @@
                 <!-- Bio Box #8 Starts -->
                     <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="bio-box-1">
-                            <img src="images/about/image9.jpg" alt="Profile Image 4" class="img-fluid img-center bio-thumb br-5">
+                            <img src={{ url_for('static', filename="images/about/image9.jpg") }} alt="Profile Image 4" class="img-fluid img-center bio-thumb br-5">
                             <h6 class="text-weight-bold text-uppercase text-spl-color">Robert Dezodana</h6>
                             <p class="text-weight-light">master chef</p>
                         </div>
@@ -312,14 +312,14 @@
 		</footer>
 	<!-- Footer Ends -->
 	<!-- Template JS Files -->
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/plugins/datetimepicker/js/moment-with-locales.min.js"></script>
-	<script src="js/plugins/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
-	<script src="js/plugins/shuffle/jquery.shuffle.modernizr.min.js"></script>
-	<script src="js/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<script src={{ url_for('static', filename="js/jquery-3.3.1.min.js") }}></script>
+	<script src={{ url_for('static', filename="js/popper.min.js") }}></script>
+	<script src={{ url_for('static', filename="js/bootstrap.min.js") }}></script>
+	<script src={{ url_for('static', filename="js/plugins/datetimepicker/js/moment-with-locales.min.js") }}></script>
+	<script src={{ url_for('static', filename="js/plugins/datetimepicker/js/bootstrap-datetimepicker.min.js") }}></script>
+	<script src={{ url_for('static', filename="js/plugins/shuffle/jquery.shuffle.modernizr.min.js") }}></script>
+	<script src={{ url_for('static', filename="js/plugins/magnific-popup/jquery.magnific-popup.min.js") }}></script>
 	<script src="https://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
-	<script src="js/custom.js"></script>
+	<script src={{ url_for('static', filename="js/custom.js") }}></script>
 	</body>
 </html>
