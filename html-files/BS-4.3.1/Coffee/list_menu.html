@@ -17,12 +17,12 @@
             </thead>
             <tbody>
 
-                {% for row in user_stories: %}
+                {% for row in user_stories %}
 
                     <tr>
                         <pre>{{row}}</pre>
-                        {% for key, value in row.items(): %}
-                            {% if key == ' title': %}
+                        {% for key, value in row.items() %}
+                            {% if key == ' title' %}
                                 <td> <a href="/story/{{row.id}}">{{ value }}</a></td>
                             {% else: %}
                                 <td>{{ value }}</td>

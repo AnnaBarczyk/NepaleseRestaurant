@@ -13,14 +13,7 @@ app = Flask(__name__, template_folder=template_dir, static_folder=STATIC_DIR)
 
 @app.route('/')
 def route_list():
-
-    titles = ['chapter','id','eng_name','pol_name','price']
-    menu = connection.reader_csv()
-    for item in menu:
-        print (item.values())
-
-    
-    return render_template("menu.html", titles=titles, menu=menu)
+    return render_template("index.html" )
 
 @app.route('/contact.html')
 def contact():
@@ -28,7 +21,28 @@ def contact():
 
 @app.route('/menu.html')
 def menu():
-    return render_template("menu.html")
+
+    titles = ['chapter','id','eng_name','pol_name','price']
+    chapters = []
+
+    menu_full = connection.reader_csv()
+
+    menu = []
+    for position in menu_full:
+        print (position)
+        item = dict(position)
+        print(item)
+        menu.append(item)
+
+
+    for item in menu_full:
+        for key, value in item.items():
+            if key == 'chapter':
+                if value not in chapters:
+                    chapters.append(value)
+
+
+    return render_template("menu.html", titles=titles, menu=menu, chapters=chapters)
 
 @app.route('/about.html')
 def about():

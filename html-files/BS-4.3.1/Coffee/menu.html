@@ -185,13 +185,22 @@
                         <!-- Our Menu List #1 Starts -->
                         <h3 class="main-heading-1 text-center text-uppercase text-weight-bold">Classic Cool's</h3>
 						<ul class="list-unstyled our-menu-list two">
+                            {% for item in menu %}
 							<li>
+
 								<h6 class="our-menu-list-title clearfix">
-									<span class="text-weight-light float-left text-uppercase">Cappuccino</span>
-									<span class="text-weight-normal float-right text-right">$ 2.50</span>
+                                    {%  for key, value in item.items() %}
+                                    {% if key == 'pol_name' %}
+									<span class="text-weight-light float-left text-uppercase">{{value}}</span>
+                                    {%  elif key == 'price' %}
+									<span class="text-weight-normal float-right text-right">{{ value }}</span>
+                                    {% endif %}
+                                        {%  endfor %}
 								</h6>
+
 								<p>Ieish Cream. Bols Creme De Menthe, chocolate drizzle, Skyy Vodka, Barcardi Superior Rum</p>
 							</li>
+                        {% endfor %}
 						</ul>
                         <!-- Our Menu List #1 Ends -->
 
