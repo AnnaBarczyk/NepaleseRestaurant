@@ -22,8 +22,17 @@ def route_list():
     
     return render_template("menu.html", titles=titles, menu=menu)
 
+@app.route('/contact.html')
+def contact():
+    return render_template("contact.html")
 
+@app.route('/menu.html')
+def menu():
+    return render_template("menu.html")
 
+@app.route('/about.html')
+def about():
+    return render_template("about.html")
 
 if __name__ == '__main__':
     app.run(
