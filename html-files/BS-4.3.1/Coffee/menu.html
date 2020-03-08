@@ -190,15 +190,18 @@
 
 								<h6 class="our-menu-list-title clearfix">
                                     {%  for key, value in item.items() %}
-                                    {% if key == 'pol_name' %}
+                                    {% if key == 'eng_name' %}
 									<span class="text-weight-light float-left text-uppercase">{{value}}</span>
                                     {%  elif key == 'price' %}
 									<span class="text-weight-normal float-right text-right">{{ value }}</span>
                                     {% endif %}
                                         {%  endfor %}
 								</h6>
-
-								<p>Ieish Cream. Bols Creme De Menthe, chocolate drizzle, Skyy Vodka, Barcardi Superior Rum</p>
+                                {%  for key, value in item.items() %}
+                                {%  if key == "pol_name" %}
+								<p>{{ value }}</p>
+                                {% endif %}
+                                    {% endfor %}
 							</li>
                         {% endfor %}
 						</ul>
