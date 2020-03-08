@@ -183,22 +183,27 @@
 				<!-- Left Col Starts -->
 					<div class="col-md-4 col-sm-12">
                         <!-- Our Menu List #1 Starts -->
-                        <h3 class="main-heading-1 text-center text-uppercase text-weight-bold">Classic Cool's</h3>
-						<ul class="list-unstyled our-menu-list two">
+                        {% for chapter in chapters %}
+                        <h3 class="main-heading-1 text-center text-uppercase text-weight-bold">{{  chapter }}</h3>
+
+                            <ul class="list-unstyled our-menu-list two">
                             {% for item in menu %}
 							<li>
-
 								<h6 class="our-menu-list-title clearfix">
                                     {%  for key, value in item.items() %}
-                                    {% if key == 'eng_name' %}
-									<span class="text-weight-light float-left text-uppercase">{{value}}</span>
-                                    {%  elif key == 'price' %}
-									<span class="text-weight-normal float-right text-right">{{ value }}</span>
-                                    {% endif %}
-                                        {%  endfor %}
+
+                                        {% if key == 'id' and item['chapter'] == chapter %}
+                                        <span class="text-weight-light float-left text-uppercase">{{value}}.</span>
+                                        {% elif key == 'eng_name' and item['chapter'] == chapter%}
+                                        <span class="text-weight-light float-left text-uppercase">{{value}}</span>
+                                        {%  elif key == 'price' and item['chapter'] == chapter %}
+                                        <span class="text-weight-normal float-right text-right">{{ value }}</span>
+                                        {% endif %}
+                                        {% endfor %}
 								</h6>
+
                                 {%  for key, value in item.items() %}
-                                {%  if key == "pol_name" %}
+                                {%  if key == "pol_name" and item['chapter'] == chapter %}
 								<p>{{ value }}</p>
                                 {% endif %}
                                     {% endfor %}
@@ -206,9 +211,10 @@
                         {% endfor %}
 						</ul>
                         <!-- Our Menu List #1 Ends -->
-
+                    {%  endfor %}
 				<!-- Left Col Ends -->
                     </div>
+
 				<!-- Spacer For Small Screen Starts -->
 					<div class="w-100 d-xs-block d-sm-block d-md-none">
 						<div class="spacer-small"></div>

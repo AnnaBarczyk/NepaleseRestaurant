@@ -34,12 +34,15 @@ def menu():
         print(item)
         menu.append(item)
 
+    menu_full = connection.reader_csv()
 
     for item in menu_full:
         for key, value in item.items():
             if key == 'chapter':
                 if value not in chapters:
                     chapters.append(value)
+
+
 
 
     return render_template("menu.html", titles=titles, menu=menu, chapters=chapters)
