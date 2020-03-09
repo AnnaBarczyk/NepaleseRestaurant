@@ -101,7 +101,23 @@
 	<!-- Header Wrap Ends -->
 	<!-- Main Container Starts -->
 		<div class="main-container container">
-		
+{#		form starts#}
+            <ul>
+    {% for position in menu %}
+                <li>
+                {%  for key, value in position.items() %}
+                        {{ key }}: <input type="text" name="{{ key }}"  value="{{ value }}">
+                    {%  endfor %}
+                </li>
+            {%  endfor %}
+            </ul>
+
+
+
+
+
+
+
 		</div>
 	<!-- Main Container Ends -->	
 	<!-- Footer Starts -->
