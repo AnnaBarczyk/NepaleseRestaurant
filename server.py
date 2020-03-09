@@ -42,10 +42,13 @@ def menu():
                 if value not in chapters:
                     chapters.append(value)
 
+    print(chapters)
+    print (len(chapters))
+    chapters_col_1 = chapters[0:5]
+    chapters_col_2 = chapters[6:13]
+    chapters_col_3 = chapters[13:]
 
-
-
-    return render_template("menu.html", titles=titles, menu=menu, chapters=chapters)
+    return render_template("menu.html", titles=titles, menu=menu, chapters_col_1=chapters_col_1, chapters_col_2=chapters_col_2, chapters_col_3=chapters_col_3)
 
 @app.route('/about.html')
 def about():

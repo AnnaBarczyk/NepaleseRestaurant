@@ -183,7 +183,7 @@
 				<!-- Left Col Starts -->
 					<div class="col-md-4 col-sm-12">
                         <!-- Our Menu List #1 Starts -->
-                        {% for chapter in chapters %}
+                        {% for chapter in chapters_col_1 %}
                         <h3 class="main-heading-1 text-center text-uppercase text-weight-bold">{{  chapter }}</h3>
 
                             <ul class="list-unstyled our-menu-list two">
@@ -223,18 +223,38 @@
 				<!-- Spacer For Small Screen Ends -->
 				<!-- Middle Col Starts -->
 					<div class="col-md-4 col-sm-12">
-					<!-- Our Menu List #2 Starts -->
-						<h3 class="main-heading-1 text-center text-uppercase text-weight-bold">Classic Cool's</h3>
-						<ul class="list-unstyled our-menu-list two">
-							<li>
-								<h6 class="our-menu-list-title clearfix">
-									<span class="text-weight-light float-left text-uppercase">Cappuccino</span>
-									<span class="text-weight-normal float-right text-right">$ 2.50</span>
-								</h6>
-								<p>Ieish Cream. Bols Creme De Menthe, chocolate drizzle, Skyy Vodka, Barcardi Superior Rum</p>
-							</li>
+                        <!-- Our Menu List #2 Starts -->
+                        {% for chapter in chapters_col_2 %}
+                        <h3 class="main-heading-1 text-center text-uppercase text-weight-bold">{{  chapter }}</h3>
+
+                            <ul class="list-unstyled our-menu-list two">
+                            {% for item in menu %}
+                                {%  if item['chapter'] == chapter %}
+                                <li>
+                                    <h6 class="our-menu-list-title clearfix">
+                                        {%  for key, value in item.items() %}
+                                            {% if key == 'id' and item['chapter'] == chapter %}
+                                                <span class="text-weight-light float-left text-uppercase">{{ value }}.</span>
+                                            {% elif key == 'eng_name' and item['chapter'] == chapter%}
+                                                <span class="text-weight-light float-left text-uppercase">{{ value }}</span>
+                                            {%  elif key == 'price' and item['chapter'] == chapter %}
+                                                <span class="text-weight-normal float-right text-right">{{ value }}</span>
+                                            {% endif %}
+                                            {% endfor %}
+                                    </h6>
+
+                                    {%  for key, value in item.items() %}
+                                    {%  if key == "pol_name" and item['chapter'] == chapter %}
+                                    <p>{{ value }}</p>
+                                    {% endif %}
+                                        {% endfor %}
+                                </li>
+                                {% endif %}
+                        {% endfor %}
 						</ul>
-					<!-- Our Menu List #2 Ends -->
+                        <!-- Our Menu List #2 Ends -->
+                    {%  endfor %}
+				<!-- Left Col Ends -->
 					</div>
 				<!-- Middle Col Ends -->
 				<!-- Spacer For Small Screen Starts -->
@@ -244,18 +264,38 @@
 				<!-- Spacer For Small Screen Ends -->
 				<!-- Right Col Starts -->
 					<div class="col-md-4 col-sm-12">
-					<!-- Our Menu List #3 Starts -->
-						<h3 class="main-heading-1 text-center text-uppercase text-weight-bold">Dessert's</h3>
-						<ul class="list-unstyled our-menu-list two">
-							<li>
-								<h6 class="our-menu-list-title clearfix">
-									<span class="text-weight-light float-left text-uppercase">Cappuccino</span>
-									<span class="text-weight-normal float-right text-right">$ 2.50</span>
-								</h6>
-								<p>Ieish Cream. Bols Creme De Menthe, chocolate drizzle, Skyy Vodka, Barcardi Superior Rum</p>
-							</li>
+                        <!-- Our Menu List #3 Starts -->
+                        {% for chapter in chapters_col_3 %}
+                        <h3 class="main-heading-1 text-center text-uppercase text-weight-bold">{{  chapter }}</h3>
+
+                            <ul class="list-unstyled our-menu-list two">
+                            {% for item in menu %}
+                                {%  if item['chapter'] == chapter %}
+                                <li>
+                                    <h6 class="our-menu-list-title clearfix">
+                                        {%  for key, value in item.items() %}
+                                            {% if key == 'id' and item['chapter'] == chapter %}
+                                                <span class="text-weight-light float-left text-uppercase">{{ value }}.</span>
+                                            {% elif key == 'eng_name' and item['chapter'] == chapter%}
+                                                <span class="text-weight-light float-left text-uppercase">{{ value }}</span>
+                                            {%  elif key == 'price' and item['chapter'] == chapter %}
+                                                <span class="text-weight-normal float-right text-right">{{ value }}</span>
+                                            {% endif %}
+                                            {% endfor %}
+                                    </h6>
+
+                                    {%  for key, value in item.items() %}
+                                    {%  if key == "pol_name" and item['chapter'] == chapter %}
+                                    <p>{{ value }}</p>
+                                    {% endif %}
+                                        {% endfor %}
+                                </li>
+                                {% endif %}
+                        {% endfor %}
 						</ul>
-					<!-- Our Menu List #3 Ends -->
+                        <!-- Our Menu List #3 Ends -->
+                    {%  endfor %}
+				<!-- Left Col Ends -->
 					<!-- Spacer Starts -->
 						<div class="spacer-tiny"></div>
 					<!-- Spacer Ends -->
