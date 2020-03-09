@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for
 from collections import OrderedDict
 import os
+from flask_mail import Mail, Message
+from flask import Flask, render_template
 import connection
-
 
 # TODO: change path to absolute for all users
 
@@ -10,15 +11,44 @@ template_dir = os.path.abspath('/home/anna/Codecool/Indyjskie/Nepal/html-files/B
 STATIC_DIR = os.path.abspath('/home/anna/Codecool/Indyjskie/Nepal/html-files/BS-4.3.1/Coffee')
 app = Flask(__name__, template_folder=template_dir, static_folder=STATIC_DIR)
 
+mail = Mail(app)  # instantiate the mail class
+
+# configuration of mail
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'sagarmathacontactform@gmail.com'
+app.config['MAIL_PASSWORD'] = 'Ajhb$67dn'
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+mail = Mail(app)
+
 
 @app.route('/')
 @app.route('/index.html')
 def route_list():
     return render_template("index.html" )
 
-@app.route('/contact.html')
+@app.route('/contact.html', methods=["GET", "POST"])
 def contact():
+    if request.method == "POST":
+        message = request.form['message']
+        sender_email = request.form['email']
+        recipients = 'dzolwlive@gmail.com'
+        title = request.form['subject']
+        first_name = request.form['fname']
+        last_name = request.form['lname']
+
+        msg = Message(
+            'Hello',
+            sender='sagarmathacontactform@gmail.com',
+            recipients=['dzolwlive@gmail.com']
+        )
+        msg.body = 'Mail from: ' + first_name + " " + last_name + " Subject: " + title + " " + message
+        mail.send(msg)
+        print('sent')
+        return render_template("contact.html")
     return render_template("contact.html")
+
 
 @app.route('/menu.html')
 def menu():
