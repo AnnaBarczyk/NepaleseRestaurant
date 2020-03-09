@@ -23,16 +23,14 @@ def contact():
 @app.route('/menu.html')
 def menu():
 
-    titles = ['chapter','id','eng_name','pol_name','price']
+    # titles = ['chapter','id','eng_name','pol_name','price']
     chapters = []
 
     menu_full = connection.reader_csv()
 
     menu = []
     for position in menu_full:
-        print (position)
         item = dict(position)
-        print(item)
         menu.append(item)
 
     menu_full = connection.reader_csv()
@@ -43,17 +41,35 @@ def menu():
                 if value not in chapters:
                     chapters.append(value)
 
-    print(chapters)
-    print (len(chapters))
     chapters_col_1 = chapters[0:5]
     chapters_col_2 = chapters[6:13]
     chapters_col_3 = chapters[13:]
 
-    return render_template("menu.html", titles=titles, menu=menu, chapters_col_1=chapters_col_1, chapters_col_2=chapters_col_2, chapters_col_3=chapters_col_3)
+    return render_template("menu.html", menu=menu, chapters_col_1=chapters_col_1, chapters_col_2=chapters_col_2, chapters_col_3=chapters_col_3)
 
 @app.route('/about.html')
 def about():
     return render_template("about.html")
+
+@app.route('/inner.html')
+def inner():
+
+    menu_full = connection.reader_csv()
+
+    menu = []
+    for position in menu_full:
+        item = dict(position)
+        menu.append(item)
+
+    chapters = []
+    for item in menu_full:
+        for key, value in item.items():
+            if key == 'chapter':
+                if value not in chapters:
+                    chapters.append(value)
+
+    return render_template("inner.html", menu=menu, chapters=chapters)
+
 
 if __name__ == '__main__':
     app.run(
