@@ -6,12 +6,13 @@ import connection
 
 # TODO: change path to absolute for all users
 
-template_dir = os.path.abspath('/home/ubuntu/Desktop/Nepal/html-files/BS-4.3.1/Coffee')
-STATIC_DIR = os.path.abspath('/home/ubuntu/Desktop/Nepal/html-files/BS-4.3.1/Coffee')
+template_dir = os.path.abspath('/home/anna/Codecool/Indyjskie/Nepal/html-files/BS-4.3.1/Coffee')
+STATIC_DIR = os.path.abspath('/home/anna/Codecool/Indyjskie/Nepal/html-files/BS-4.3.1/Coffee')
 app = Flask(__name__, template_folder=template_dir, static_folder=STATIC_DIR)
 
 
 @app.route('/')
+@app.route('/index.html')
 def route_list():
     return render_template("index.html" )
 
