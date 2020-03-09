@@ -188,26 +188,27 @@
 
                             <ul class="list-unstyled our-menu-list two">
                             {% for item in menu %}
-							<li>
-								<h6 class="our-menu-list-title clearfix">
+                                {%  if item['chapter'] == chapter %}
+                                <li>
+                                    <h6 class="our-menu-list-title clearfix">
+                                        {%  for key, value in item.items() %}
+                                            {% if key == 'id' and item['chapter'] == chapter %}
+                                                <span class="text-weight-light float-left text-uppercase">{{ value }}.</span>
+                                            {% elif key == 'eng_name' and item['chapter'] == chapter%}
+                                                <span class="text-weight-light float-left text-uppercase">{{ value }}</span>
+                                            {%  elif key == 'price' and item['chapter'] == chapter %}
+                                                <span class="text-weight-normal float-right text-right">{{ value }}</span>
+                                            {% endif %}
+                                            {% endfor %}
+                                    </h6>
+
                                     {%  for key, value in item.items() %}
-
-                                        {% if key == 'id' and item['chapter'] == chapter %}
-                                        <span class="text-weight-light float-left text-uppercase">{{value}}.</span>
-                                        {% elif key == 'eng_name' and item['chapter'] == chapter%}
-                                        <span class="text-weight-light float-left text-uppercase">{{value}}</span>
-                                        {%  elif key == 'price' and item['chapter'] == chapter %}
-                                        <span class="text-weight-normal float-right text-right">{{ value }}</span>
-                                        {% endif %}
+                                    {%  if key == "pol_name" and item['chapter'] == chapter %}
+                                    <p>{{ value }}</p>
+                                    {% endif %}
                                         {% endfor %}
-								</h6>
-
-                                {%  for key, value in item.items() %}
-                                {%  if key == "pol_name" and item['chapter'] == chapter %}
-								<p>{{ value }}</p>
+                                </li>
                                 {% endif %}
-                                    {% endfor %}
-							</li>
                         {% endfor %}
 						</ul>
                         <!-- Our Menu List #1 Ends -->
