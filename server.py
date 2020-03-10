@@ -1,15 +1,13 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
-from collections import OrderedDict
 import os
 from flask_mail import Mail, Message
-from flask import Flask, render_template
+from flask import Flask, render_template, request, flash
 import connection
 
 
 # TODO: change path to absolute for all users
 
-template_dir = os.path.abspath('/home/ubuntu/Desktop/Nepal/html-files/BS-4.3.1/Coffee')
-STATIC_DIR = os.path.abspath('/home/ubuntu/Desktop/Nepal/html-files/BS-4.3.1/Coffee')
+template_dir = os.path.abspath('/home/anna/Codecool/Indyjskie/Nepal/html-files/BS-4.3.1/Coffee')
+STATIC_DIR = os.path.abspath('/home/anna/Codecool/Indyjskie/Nepal/html-files/BS-4.3.1/Coffee')
 app = Flask(__name__, template_folder=template_dir, static_folder=STATIC_DIR)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
@@ -29,6 +27,7 @@ mail = Mail(app)
 @app.route('/index.html')
 def route_list():
     return render_template("index.html" )
+
 
 @app.route('/contact.html', methods=["GET", "POST"])
 def contact():
@@ -81,6 +80,7 @@ def menu():
 @app.route('/about.html')
 def about():
     return render_template("about.html")
+
 
 @app.route('/inner.html')
 def inner():
