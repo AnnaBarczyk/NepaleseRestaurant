@@ -1788,3 +1788,8 @@ ul#gallery-filter li a:focus {
 	   -moz-transition: all 1s ease;
 		    transition: all 1s ease;	
 }
+
+.flashes {
+	color: forestgreen;
+	font-size: 20px;
+}

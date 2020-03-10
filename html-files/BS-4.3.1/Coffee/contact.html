@@ -85,6 +85,18 @@
 			<!-- Mainarea Starts -->
 				<div class="col-md-8 col-sm-12">
 					<h2 class="heading-1 text-weight-normal">Formularz kontaktowy</h2>
+                <!-- FLash meessage starts -->
+                        <p> {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                                <ul class=flashes>
+                                    {% for message in messages %}
+                                        {{ message }}
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                        {% endwith %}
+                        </p>
+                <!-- FLash meessage ends -->
 				<!-- Contact Form Starts -->
 					<div class="status alert alert-success contact-status"></div>
 					<form id="main-contact-form" class="contact-form" name="contact-form" method="post" role="form" action="/contact.html">
@@ -138,6 +150,8 @@
 					</form>
 				<!-- Contact Form Ends -->
 				</div>
+
+
 			<!-- Mainarea Ends -->
 			<!-- Spacer For Small Screen Starts -->
 				<div class="w-100 d-xs-block d-sm-block d-md-none">

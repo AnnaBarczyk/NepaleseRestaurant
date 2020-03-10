@@ -1,15 +1,17 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 from collections import OrderedDict
 import os
 from flask_mail import Mail, Message
 from flask import Flask, render_template
 import connection
 
+
 # TODO: change path to absolute for all users
 
-template_dir = os.path.abspath('/home/anna/Codecool/Indyjskie/Nepal/html-files/BS-4.3.1/Coffee')
-STATIC_DIR = os.path.abspath('/home/anna/Codecool/Indyjskie/Nepal/html-files/BS-4.3.1/Coffee')
+template_dir = os.path.abspath('/home/ubuntu/Desktop/Nepal/html-files/BS-4.3.1/Coffee')
+STATIC_DIR = os.path.abspath('/home/ubuntu/Desktop/Nepal/html-files/BS-4.3.1/Coffee')
 app = Flask(__name__, template_folder=template_dir, static_folder=STATIC_DIR)
+app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
 mail = Mail(app)  # instantiate the mail class
 
@@ -33,8 +35,7 @@ def contact():
     if request.method == "POST":
         message = request.form['message']
         sender_email = request.form['email']
-        recipients = 'dzolwlive@gmail.com'
-        title = request.form['subject']
+        subject = request.form['subject']
         first_name = request.form['fname']
         last_name = request.form['lname']
 
@@ -43,9 +44,9 @@ def contact():
             sender='sagarmathacontactform@gmail.com',
             recipients=['dzolwlive@gmail.com']
         )
-        msg.body = 'Mail from: ' + first_name + " " + last_name + " Subject: " + title + " " + message
+        msg.body = f"Mail from: {first_name} {last_name} \n Sender email: {sender_email} \n Subject: {subject} \n Message: {message}"
         mail.send(msg)
-        print('sent')
+        flash('Dziękujemy za Twoją wiadomość! / Thank You for your message!')
         return render_template("contact.html")
     return render_template("contact.html")
 
