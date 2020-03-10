@@ -1,8 +1,6 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
-from collections import OrderedDict
 import os
 from flask_mail import Mail, Message
-from flask import Flask, render_template
+from flask import Flask, render_template, request, flash
 import connection
 
 
@@ -82,31 +80,25 @@ def menu():
 def about():
     return render_template("about.html")
 
-@app.route('/inner.html', methods=['GET', 'POST'])
+@app.route('/inner.html')
 def inner():
-    if request.method == 'POST':
-        menu = request.form
-        for item in menu:
-            print(item)
-    else:
-        menu_full = connection.reader_csv()
 
-        menu = []
-        for position in menu_full:
-            item = dict(position)
-            menu.append(item)
+    menu_full = connection.reader_csv()
 
-        chapters = []
-        for item in menu_full:
-            for key, value in item.items():
-                if key == 'chapter':
-                    if value not in chapters:
-                        chapters.append(value)
+    menu = []
+    for position in menu_full:
+        item = dict(position)
+        menu.append(item)
 
+    chapters = []
+    for item in menu_full:
+        for key, value in item.items():
+            if key == 'chapter':
+                if value not in chapters:
+                    chapters.append(value)
 
+    return render_template("inner.html", menu=menu, chapters=chapters)
 
-        return render_template("inner.html", menu=menu, chapters=chapters)
-    return redirect('/menu.html')
 
 if __name__ == '__main__':
     app.run(
