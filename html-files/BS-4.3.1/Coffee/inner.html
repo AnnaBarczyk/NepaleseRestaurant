@@ -79,8 +79,9 @@
 		</header>
 	<!-- Header Wrap Ends -->
 	<!-- Main Container Starts -->
-		<div class="rom">
+		<div class="fa-edit">
 {#		form starts#}
+        <form action="inner.html" method="post">
             <ul>
             {% for position in menu %}
                 <li>
@@ -90,7 +91,8 @@
                 </li>
             {%  endfor %}
             </ul>
-
+            <button type="submit">Save all changes</button>
+        </form>
 		</div>
 	<!-- Main Container Ends -->
 
