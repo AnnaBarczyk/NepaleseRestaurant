@@ -1,4 +1,4 @@
-import os
+import os, json
 from flask_mail import Mail, Message
 from flask import Flask, render_template, request, flash
 import connection
@@ -26,7 +26,14 @@ mail = Mail(app)
 @app.route('/')
 @app.route('/index.html')
 def route_list():
-    return render_template("index.html" )
+    sections_to_show = []
+    all_settings = connection.open_json_settings()
+    if all_settings["indexIntroSection"] == 'show':
+        sections_to_show.append('indexIntroSection')
+    if all_settings["indexTodaySpecialMenu"] == 'show':
+        sections_to_show.append('indexTodaySpecialMenu')
+
+    return render_template("index.html", sections_to_show=sections_to_show )
 
 
 @app.route('/contact.html', methods=["GET", "POST"])
@@ -52,6 +59,13 @@ def contact():
 
 @app.route('/menu.html')
 def menu():
+    sections_to_show = []
+    all_settings = connection.open_json_settings()
+    if all_settings["menuLunch"] == 'show':
+        sections_to_show.append('menuLunch')
+    if all_settings["menuMain"] == 'show':
+        sections_to_show.append('menuMain')
+
 
     # titles = ['chapter','id','eng_name','pol_name','price']
     chapters = []
@@ -75,11 +89,20 @@ def menu():
     chapters_col_2 = chapters[6:13]
     chapters_col_3 = chapters[13:]
 
-    return render_template("menu.html", menu=menu, chapters_col_1=chapters_col_1, chapters_col_2=chapters_col_2, chapters_col_3=chapters_col_3)
+    return render_template("menu.html", menu=menu, chapters_col_1=chapters_col_1, chapters_col_2=chapters_col_2, chapters_col_3=chapters_col_3, sections_to_show=sections_to_show)
 
 @app.route('/about.html')
 def about():
-    return render_template("about.html")
+    sections_to_show = []
+    all_settings = connection.open_json_settings()
+    if all_settings["aboutIntroSection"] == 'show':
+        sections_to_show.append('aboutIntroSection')
+    if all_settings["aboutTestimonialSection"] == 'show':
+        sections_to_show.append('aboutTestimonialSection')
+    if all_settings["aboutStaffSection"] == 'show':
+        sections_to_show.append('aboutStaffSection')
+
+    return render_template("about.html", sections_to_show=sections_to_show)
 
 
 @app.route('/inner.html')
@@ -100,6 +123,8 @@ def inner():
                     chapters.append(value)
 
     return render_template("inner.html", menu=menu, chapters=chapters)
+
+
 
 
 if __name__ == '__main__':
