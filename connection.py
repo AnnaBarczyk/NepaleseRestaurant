@@ -20,6 +20,6 @@ def writer(requests):
 
 
 def open_json_settings():
-    with open('/home/anna/Codecool/Indyjskie/Nepal/settings.json') as file:
+    with open('settings.json') as file:
         data = json.load(file)
     return data
