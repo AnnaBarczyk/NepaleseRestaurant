@@ -78,7 +78,9 @@
         <!-- Page Heading Ends -->
 		</header>
 	<!-- Header Wrap Ends -->
-	<!-- About Intro Section Starts -->
+
+    {% if "aboutIntroSection" in sections_to_show %}
+	<!-- About Intro Section Starts (Able to delete but not looking well if comments are below) -->
 		<section class="section">
         <!-- Nested Container Starts -->
             <div class="container text-xs-center text-sm-center text-md-left">
@@ -115,7 +117,10 @@
         <!-- Nested Container Ends -->
         </section>
     <!-- About Intro Section Ends -->
-    <!-- Testimonial Section Starts -->
+    {% endif %}
+
+    {% if "aboutTestimonialSection" in sections_to_show %}
+    <!-- Testimonial Section Starts (Able to delete but colors are to bright on the site without them) -->
         <section class="section section-inverse section-testimonials parallax">
         <!-- Nested Container Starts -->
             <div class="container text-center">
@@ -135,23 +140,20 @@
                     <div class="carousel-inner" role="listbox">
                     <!-- Item #1 Starts -->
                         <div class="carousel-item active">
-                            <p><img src={{ url_for('static', filename="images/thumb-img1.jpg") }} alt="Image" class="img-fluid img-center circle"></p>
-                            <p><em>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley.</em></p>
-                            <h6 class="text-weight-bold">Client Name #1</h6>
+                            <p><em>Jedzenie genialne, pyszne, aromatyczne, cudownie przyprawione, zaskakujące! Do tego duże porcje, uczciwe ceny i miła, kameralna atmosfera. Żadna inna restauracja nie wkłada w dania tyle serca. Zakochałam się!</em></p>
+                            <h6 class="text-weight-bold">Katarzyna Pająk</h6>
                         </div>
                     <!-- Item #1 Ends -->
                     <!-- Item #2 Starts -->
                         <div class="carousel-item">
-                            <p><img src={{ url_for('static', filename="images/thumb-img1.jpg") }} alt="Image" class="img-fluid img-center circle"></p>
-                            <p><em>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley.</em></p>
-                            <h6 class="text-weight-bold">Client Name #2</h6>
+                            <p><em>Jestem stałym gościem. Smak niezmienny od lat! Dania przygotowane z sercem. Gorąco polecam autentyczna knajpka!!</em></p>
+                            <h6 class="text-weight-bold">MICHAŁ ZIELIŃSKI</h6>
                         </div>
                     <!-- Item #2 Ends -->
                     <!-- Item #3 Starts -->
                         <div class="carousel-item">
-                            <p><img src={{ url_for('static', filename="images/thumb-img1.jpg") }} alt="Image" class="img-fluid img-center circle"></p>
-                            <p><em>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the when an unknown printer took a galley.</em></p>
-                            <h6 class="text-weight-bold">Client Name #3</h6>
+                            <p><em>Kapitalne jedzenie. Świeże, dobrej jakości, aromatyczne i bardzo smaczne. Właściciele to przemili ludzie. Bardzo dobra - jeżeli nie najlepsza - kuchnia nepalska w Warszawie. Polecam!</em></p>
+                            <h6 class="text-weight-bold">Marta P.</h6>
                         </div>
                     <!-- Item #3 Ends -->
                     </div>
@@ -162,7 +164,10 @@
         <!-- Nested Container Ends -->
         </section>
     <!-- Testimonial Section Ends -->
-    <!-- Staff Section Starts -->
+    {% endif %}
+
+    {% if "aboutStaffSection" in sections_to_show %}
+    <!-- Staff Section Starts (Able to delete but need to change gradient fades) -->
         <section class="section">
         <!-- Nested Container Starts -->
             <div class="container text-center">
@@ -201,6 +206,8 @@
         <!-- Nested Container Ends -->
         </section>
     <!-- Staff Section Ends -->
+    {% endif %}
+    
 	<!-- Footer Starts -->
 		<footer class="main-footer">
 		<!-- Nested Container Starts -->

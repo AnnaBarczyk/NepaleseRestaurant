@@ -73,7 +73,7 @@
 			<!-- Container Ends -->
 			</nav>
 		<!-- Navbar Ends -->
-		<!-- Slider Starts -->
+		<!-- Slider Starts (Unable to delete also broke after resizing) -->
 			<div id="main-slider" class="carousel slide carousel-fade" data-ride="carousel">
 			<!-- Wrapper For Slides Starts -->
 				<div class="carousel-inner text-center">
@@ -131,8 +131,8 @@
 		<!-- Slider Ends -->
 		</header>
 	<!-- Header Wrap Ends -->
-
-	<!-- Intro Section Starts -->
+    {% if "indexIntroSection" in sections_to_show %}
+	<!-- Intro Section Starts (Able to delete)-->
 		<section class="section section-home-intro">
 		<!-- Nested Container Starts -->
 			<div class="container text-center">
@@ -171,9 +171,12 @@
 			</div>
 		<!-- Nested Container Ends -->
 		</section>
-	<!-- Intro Section Ends -->
+<!-- Intro Section Ends -->
+    {% endif %}
 
- <!-- Today Special Menu Section Starts -->
+
+    {% if "indexTodaySpecialMenu" in sections_to_show %}
+ <!-- Today Special Menu Section Starts (Able to delete) -->
         <section class="section section-inverse section-spl-menu">
         <!-- Nested Container Starts -->
             <div class="container">
@@ -200,6 +203,7 @@
                 </ul>
             <!-- Special Menu Card List Ends -->
             </div>
+    {% endif %}
 
 
 	<!-- Footer Starts -->

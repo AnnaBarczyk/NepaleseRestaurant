@@ -81,8 +81,8 @@
         </header>
 	<!-- Header Wrap Ends -->
 
-
-    <!-- Menu Items Listing #1 Section Starts -->
+    {% if "menuLunch" in sections_to_show %}
+    <!-- Menu Items Listing #1 Section Starts (Able to delete but need to change background of menu -->
 		<section class="section section-menu-card">
         <!-- Nested Container Starts -->
             <div class="container text-xs-center text-sm-center text-md-left">
@@ -165,10 +165,11 @@
     <!-- Spacer Starts -->
         <div class="spacer-tiny"></div>
     <!-- Spacer Ends -->
+    {% endif %}
 
 
-
-	<!-- Our Menu Section Starts -->
+    {% if "menuMain" in sections_to_show %}
+	<!-- Our Menu Section Starts (Able to delete)-->
 		<section class="section section-inverse section-home-menu">
 		<!-- Nested Container Starts -->
 			<div class="container">
@@ -307,6 +308,7 @@
 		<!-- Nested Container Ends -->
 		</section>
 	<!-- Our Menu Section Ends -->
+    {% endif %}
 
 	<!-- Footer Starts -->
 		<footer class="main-footer">
