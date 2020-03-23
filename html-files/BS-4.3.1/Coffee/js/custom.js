@@ -50,3 +50,29 @@
 
 	
 })(window.jQuery);
+
+function AddRow(position) {
+  let newItem = document.createElement("LI");
+//   let textnode = document.createTextNode(`
+// 	Chapter: <input type="text" name="new-chapter ${position}>" value="">
+// 	id: <input type="text" name="new-id ${position}>" value="">
+// 	eng_name: <input type="text" name="new-eng-name ${position}>" value="">
+// 	pol_name: <input type="text" name="new-pol-name ${position}>" value="">
+// 	price: <input type="text" name="new-price ${position}>" value="">
+//
+// `);
+
+
+  newItem.innerHTML = `
+	Chapter: <input type="text" name="new-chapter ${position}>" value="">
+	id: <input type="text" name="new-id ${position}>" value="">
+	eng_name: <input type="text" name="new-eng-name ${position}>" value="">
+	pol_name: <input type="text" name="new-pol-name ${position}>" value="">
+	price: <input type="text" name="new-price ${position}>" value="">
+
+`;
+  let newPosition = position + 2;
+  let list = document.getElementById("myformlist");
+  list.insertBefore(newItem, list.children[newPosition]);
+
+}

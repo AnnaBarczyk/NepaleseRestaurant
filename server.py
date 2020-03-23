@@ -1,6 +1,6 @@
 import os, json
 from flask_mail import Mail, Message
-from flask import Flask, render_template, request, flash, jsonify
+from flask import Flask, render_template, request, flash, redirect, url_for, jsonify
 
 import connection
 
@@ -125,7 +125,7 @@ def inner():
 
         connection.writer(menu_to_csv)
 
-        return render_template("inner.html")
+        return redirect(url_for('menu'))
     else:
         menu_full = connection.reader_csv()
 

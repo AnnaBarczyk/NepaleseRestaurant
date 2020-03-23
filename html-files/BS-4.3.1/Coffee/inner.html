@@ -82,7 +82,9 @@
 		<div class="fa-edit">
 {#		form starts#}
         <form action="inner.html" method="post">
-            <ul>
+
+            <ul id="myformlist">
+            <button type="submit">Save all changes</button>
             {% for position in menu %}
                 <li>
                 {%  for key, value in position.items() %}
@@ -96,8 +98,10 @@
                             {%  endif %}
                         {% endfor %}
                          </select>
-                     {% elif key =='id' or key =='price' %}
+                     {% elif key =='id' %}
                          {{ key }}: <input type="text"  class="{{ key }}"autofocus name="{{ key }}{{ position['id'] }}"  value="{{ value }}">
+                    {% elif key =='price' %}
+                         {{ key }}: <input type="text"  class="{{ key }}"autofocus name="{{ key }}{{ position['id'] }}"  value="{{ value }}"><button type='button' onclick="AddRow({{ menu.index(position)}})" class="{{ position['id'] }} add">Add row</button><button type='button' class="{{ menu.index(position)}} delete">Delete row</button>
                     {% else %}
                         {{ key }}: <input type="text" autofocus name="{{ key }}{{ position['id'] }}"  value="{{ value }}">
                     {% endif %}
@@ -105,7 +109,7 @@
                 </li>
             {%  endfor %}
             </ul>
-            <button type="submit">Save all changes</button>
+        <button type="submit">Save all changes</button>
         </form>
 		</div>
 	<!-- Main Container Ends -->
@@ -121,7 +125,7 @@
 	<script src={{ url_for('static', filename="js/plugins/shuffle/jquery.shuffle.modernizr.min.js") }}></script>
 	<script src={{ url_for('static', filename="js/plugins/magnific-popup/jquery.magnific-popup.min.js") }}></script>
 	<script src="https://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"></script>
-	<script src={{ url_for('static', filename="js/custom.js") }}></script>
+	<script src={{ url_for('static', filename="js/custom.js") }} defer></script>
 	<script>
       AOS.init({
         disable: 'mobile'

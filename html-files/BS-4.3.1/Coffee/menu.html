@@ -194,11 +194,11 @@
                                     <h6 class="our-menu-list-title clearfix">
                                         {%  for key, value in item.items() %}
                                             {% if key == 'id' and item['chapter'] == chapter %}
-                                                <span class="text-weight-light float-left text-uppercase">{{ value }}.</span>
-                                            {% elif key == 'eng_name' and item['chapter'] == chapter%}
-                                                <span class="text-weight-light float-left text-uppercase">{{ value }}</span>
-                                            {%  elif key == 'price' and item['chapter'] == chapter %}
-                                                <span class="text-weight-normal float-right text-right">{{ value }}</span>
+                                                <span class="text-weight-light float-left text-uppercase">{{ value }}.{{ item['eng_name'] }}</span>
+{#                                            {% elif key == 'eng_name' and item['chapter'] == chapter%}#}
+{#                                                <span class="text-weight-light float-left text-uppercase">{{ value }}</span>#}
+{#                                            {%  elif key == 'price' and item['chapter'] == chapter %}#}
+                                                <span class="text-weight-normal float-right text-right">{{ item['price'] }}</span>
                                             {% endif %}
                                             {% endfor %}
                                     </h6>
