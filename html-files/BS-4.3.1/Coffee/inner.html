@@ -101,7 +101,9 @@
                      {% elif key =='id' %}
                          {{ key }}: <input type="text"  class="{{ key }}"autofocus name="{{ key }}{{ position['id'] }}"  value="{{ value }}">
                     {% elif key =='price' %}
-                         {{ key }}: <input type="text"  class="{{ key }}"autofocus name="{{ key }}{{ position['id'] }}"  value="{{ value }}"><button type='button' onclick="AddRow({{ menu.index(position)}})" class="{{ position['id'] }} add">Add row</button><button type='button' class="{{ menu.index(position)}} delete">Delete row</button>
+                         {{ key }}: <input type="text"  class="{{ key }}"autofocus name="{{ key }}{{ position['id'] }}"  value="{{ value }}">
+                        <button type='button' onclick="AddRow({{ menu.index(position)}})" class="{{ menu.index(position)}} add">New Row</button>
+                        <button type='button' onclick="DeleteRow(this.parentElement)" class="{{ menu.index(position)}} delete">Delete</button>
                     {% else %}
                         {{ key }}: <input type="text" autofocus name="{{ key }}{{ position['id'] }}"  value="{{ value }}">
                     {% endif %}
