@@ -87,7 +87,7 @@
                 <li>
                 {%  for key, value in position.items() %}
                     {% if key == 'chapter' %}
-                        Chapter: <select class="chapters" name="{{ value }}">
+                        Chapter: <select class="chapters" name="{{ key }}{{ position['id'] }}">
                         {%  for chapter in chapters %}
                             {%  if chapter == value %}
                                   <option selected="selected" value="{{chapter}}">{{ chapter }}</option>
@@ -96,8 +96,10 @@
                             {%  endif %}
                         {% endfor %}
                          </select>
+                     {% elif key =='id' or key =='price' %}
+                         {{ key }}: <input type="text"  class="{{ key }}"autofocus name="{{ key }}{{ position['id'] }}"  value="{{ value }}">
                     {% else %}
-                        {{ key }}: <input type="text" autofocus name="{{ key }}"  value="{{ value }}">
+                        {{ key }}: <input type="text" autofocus name="{{ key }}{{ position['id'] }}"  value="{{ value }}">
                     {% endif %}
                     {%  endfor %}
                 </li>

@@ -13,9 +13,11 @@ def reader_csv():
 
 
 def writer(requests):
-    with open('menu_list.csv', 'a') as my_file:
+    with open('menu_list.csv', 'w') as my_file:
         writer = csv.DictWriter(my_file, fieldnames=DATA_HEADER)
-        writer.writerow(requests)
+        writer.writeheader()
+        for request in requests:
+            writer.writerow(request)
     return []
 
 

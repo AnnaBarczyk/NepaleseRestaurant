@@ -1795,5 +1795,13 @@ ul#gallery-filter li a:focus {
 }
 
 select {
-	width: 100px;
+	width: 150px;
+}
+
+.id {
+	width: 50px;
+}
+
+.price {
+	width: 50px;
 }

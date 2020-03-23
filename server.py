@@ -1,6 +1,7 @@
 import os, json
 from flask_mail import Mail, Message
-from flask import Flask, render_template, request, flash
+from flask import Flask, render_template, request, flash, jsonify
+
 import connection
 
 
@@ -103,25 +104,45 @@ def about():
 
     return render_template("about.html", sections_to_show=sections_to_show)
 
-@app.route('/inner.html')
+@app.route('/inner.html', methods=['POST', 'GET'])
 def inner():
+    if request.method == 'POST':
+        # print(request.form)
+        saved_menu = request.form
+        titles = ['chapter','id','eng_name','pol_name', 'price']
+        form_values = []
+        menu_to_csv = []
 
-    menu_full = connection.reader_csv()
+        for value in saved_menu.values():
+            form_values.append(value)
 
-    menu = []
-    for position in menu_full:
-        item = dict(position)
-        menu.append(item)
+        menu_values_in_row = [form_values[i:i + len(titles)] for i in range(0, len(form_values), len(titles))]
 
-    menu_full = connection.reader_csv()
-    chapters = []
-    for item in menu_full:
-        for key, value in item.items():
-            if key == 'chapter':
-                if value not in chapters:
-                    chapters.append(value)
-    print(chapters)
-    return render_template("inner.html", menu=menu, chapters=chapters)
+        for row in menu_values_in_row:
+            dict_row = dict(zip(titles, row))
+            menu_to_csv.append(dict_row)
+
+
+        connection.writer(menu_to_csv)
+
+        return render_template("inner.html")
+    else:
+        menu_full = connection.reader_csv()
+
+        menu = []
+        for position in menu_full:
+            item = dict(position)
+            menu.append(item)
+
+        menu_full = connection.reader_csv()
+        chapters = []
+        for item in menu_full:
+            for key, value in item.items():
+                if key == 'chapter':
+                    if value not in chapters:
+                        chapters.append(value)
+        print(chapters)
+        return render_template("inner.html", menu=menu, chapters=chapters)
 
 
 
