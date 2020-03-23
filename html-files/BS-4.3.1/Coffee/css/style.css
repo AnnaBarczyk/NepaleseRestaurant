@@ -1791,5 +1791,9 @@ ul#gallery-filter li a:focus {
 
 .flashes {
 	color: forestgreen;
-	font-size: 20px;
+	font-size: 150px;
+}
+
+select {
+	width: 100px;
 }

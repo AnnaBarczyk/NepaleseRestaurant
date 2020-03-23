@@ -86,7 +86,19 @@
             {% for position in menu %}
                 <li>
                 {%  for key, value in position.items() %}
-                        {{ key }}: <input type="text" name="{{ key }}"  value="{{ value }}">
+                    {% if key == 'chapter' %}
+                        Chapter: <select class="chapters" name="{{ value }}">
+                        {%  for chapter in chapters %}
+                            {%  if chapter == value %}
+                                  <option selected="selected" value="{{chapter}}">{{ chapter }}</option>
+                            {% else %}
+                                  <option value="{{chapter}}">{{ chapter }}</option>
+                            {%  endif %}
+                        {% endfor %}
+                         </select>
+                    {% else %}
+                        {{ key }}: <input type="text" autofocus name="{{ key }}"  value="{{ value }}">
+                    {% endif %}
                     {%  endfor %}
                 </li>
             {%  endfor %}
