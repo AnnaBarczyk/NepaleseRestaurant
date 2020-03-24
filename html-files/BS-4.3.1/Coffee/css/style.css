@@ -488,6 +488,12 @@ ul#gallery-filter,
 		margin-bottom: 15px;
 	}
 
+.main-container.inner {
+		padding-top: 70px;
+	padding-bottom: 70px;
+	margin-bottom: 50px;
+	background-color: mistyrose;
+}
 /* Section Styles Starts */
 
 .section {
@@ -1804,4 +1810,28 @@ select {
 
 .price {
 	width: 50px;
+}
+
+.myform {
+	border-radius: 4px;
+}
+
+.chapters {
+	border-radius: 4px;
+	background: aliceblue;
+	height: 25px;
+	margin: 5px;
+}
+
+.edit .btn-primary {
+	margin-left: 35px;
+}
+
+.edit .end .btn-outline-dark {
+	margin-left: 35px;
+}
+
+
+.edit h4 {
+	margin-left: 35px;
 }

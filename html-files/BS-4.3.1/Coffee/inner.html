@@ -79,17 +79,19 @@
 		</header>
 	<!-- Header Wrap Ends -->
 	<!-- Main Container Starts -->
-		<div class="fa-edit">
+    <div class="main-container inner">
+		<div class="edit">
 {#		forms starts#}
         <!-- first form strats -->
         <form action="backup" method="post">
-            <button onclick="confirm('This will reload menu from backup file. Do you want to proceed?')" type="submit">Get Origin Menu</button>
+            <button class="btn-primary" onclick="confirm('This will reload menu from backup file. Do you want to proceed?')" type="submit">Get Origin Menu</button>
         </form>
+        <br>
         <!-- second form strats -->
         <h4> Current Menu </h4>
-        <form action="inner.html" method="post">
+        <form class="form-group" action="inner.html" method="post">
             <ul id="myformlist">
-            <button type="submit">Save all changes</button>
+            <button class="btn-outline-dark" type="submit">Save all changes</button>
             {% for position in menu %}
                 <li>
                 {%  for key, value in position.items() %}
@@ -104,22 +106,23 @@
                         {% endfor %}
                          </select>
                      {% elif key =='id' %}
-                         {{ key }}: <input type="text"  class="{{ key }}"autofocus name="{{ key }}{{ position['id'] }}"  value="{{ value }}">
+                         {{ key }}: <input type="text"  class="{{ key }} myform" autofocus name="{{ key }}{{ position['id'] }}"  value="{{ value }}">
                     {% elif key =='price' %}
-                         {{ key }}: <input type="text"  class="{{ key }}"autofocus name="{{ key }}{{ position['id'] }}"  value="{{ value }}">
-                        <button type='button' onclick="AddRow({{ menu.index(position)}})" class="{{ menu.index(position)}} add">New Row</button>
-                        <button type='button' onclick="DeleteRow(this.parentElement)" class="{{ menu.index(position)}} delete">Delete</button>
+                         {{ key }}: <input type="text"  class="{{ key }} myform" autofocus name="{{ key }}{{ position['id'] }}"  value="{{ value }}">
+                        <button type='button' onclick="AddRow({{ menu.index(position)}})" class="{{ menu.index(position)}} add btn-twitter">New Row</button>
+                        <button type='button' onclick="DeleteRow(this.parentElement)" class="{{ menu.index(position)}} delete btn-twitter">Delete</button>
                     {% else %}
-                        {{ key }}: <input type="text" autofocus name="{{ key }}{{ position['id'] }}"  value="{{ value }}">
+                        {{ key }}: <input type="text" class="myform" autofocus name="{{ key }}{{ position['id'] }}"  value="{{ value }}">
                     {% endif %}
                     {%  endfor %}
                 </li>
             {%  endfor %}
             </ul>
-        <button type="submit">Save all changes</button>
+        <button class="edit end btn-outline-dark" type="submit">Save all changes</button>
         </form>
         <pre>{{ chapters }}</pre>
 		</div>
+    </div>
 	<!-- Main Container Ends -->
 
 
