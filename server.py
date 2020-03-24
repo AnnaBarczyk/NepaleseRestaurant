@@ -70,14 +70,14 @@ def menu():
     # titles = ['chapter','id','eng_name','pol_name','price']
     chapters = []
 
-    menu_full = connection.reader_csv()
+    menu_full = connection.reader_csv("menu_list.csv")
 
     menu = []
     for position in menu_full:
         item = dict(position)
         menu.append(item)
 
-    menu_full = connection.reader_csv()
+    menu_full = connection.reader_csv("menu_list.csv")
 
     for item in menu_full:
         for key, value in item.items():
@@ -127,14 +127,14 @@ def inner():
 
         return redirect(url_for('menu'))
     else:
-        menu_full = connection.reader_csv()
+        menu_full = connection.reader_csv("menu_list.csv")
 
         menu = []
         for position in menu_full:
             item = dict(position)
             menu.append(item)
 
-        menu_full = connection.reader_csv()
+        menu_full = connection.reader_csv("menu_list.csv")
         chapters = []
         for item in menu_full:
             for key, value in item.items():
@@ -143,6 +143,29 @@ def inner():
                         chapters.append(value)
         print(chapters)
         return render_template("inner.html", menu=menu, chapters=chapters)
+
+
+@app.route('/backup', methods=['POST', 'GET'])
+def load_backup_menu():
+    if request.method == 'POST':
+        menu_full = connection.reader_csv("menu_list_backup.csv")
+
+        menu = []
+        for position in menu_full:
+            item = dict(position)
+            menu.append(item)
+
+        menu_full = connection.reader_csv("menu_list.csv")
+        chapters = []
+        for item in menu_full:
+            for key, value in item.items():
+                if key == 'chapter':
+                    if value not in chapters:
+                        chapters.append(value)
+        return render_template("inner.html", menu=menu, chapters=chapters)
+
+
+
 
 
 

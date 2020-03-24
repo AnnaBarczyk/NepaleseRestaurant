@@ -7,8 +7,8 @@ DATA_FILE_PATH = os.getenv('DATA_FILE_PATH') if 'DATA_FILE_PATH' in os.environ e
 DATA_HEADER = ['chapter', 'id', 'eng_name', 'pol_name', 'price']
 
 
-def reader_csv():
-    user_stories = csv.DictReader(open("menu_list.csv"))
+def reader_csv(filename):
+    user_stories = csv.DictReader(open(filename))
     return user_stories
 
 

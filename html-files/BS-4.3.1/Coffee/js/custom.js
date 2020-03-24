@@ -77,6 +77,7 @@ function AddRow(position) {
 	pol_name: <input type="text" name="new-pol-name ${position}>" value="">
 	price: <input type="text" class ="price" name="new-price ${position}>" value="">
 	<button type="submit">Save & Quit</button>
+	<button type='button' onclick="DeleteRow(this.parentElement)" delete">Delete</button>
 `;
   let newPosition = position + 2;
   let list = document.getElementById("myformlist");

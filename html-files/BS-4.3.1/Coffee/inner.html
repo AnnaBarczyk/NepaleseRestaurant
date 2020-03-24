@@ -80,9 +80,13 @@
 	<!-- Header Wrap Ends -->
 	<!-- Main Container Starts -->
 		<div class="fa-edit">
-{#		form starts#}
+{#		forms starts#}
+        <!-- first form strats -->
+        <form action="backup" method="post">
+            <button type="submit">Get Origin Menu</button>
+        </form>
+        <!-- second form strats -->
         <form action="inner.html" method="post">
-
             <ul id="myformlist">
             <button type="submit">Save all changes</button>
             {% for position in menu %}
