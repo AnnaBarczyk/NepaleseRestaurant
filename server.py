@@ -107,7 +107,6 @@ def about():
 @app.route('/inner.html', methods=['POST', 'GET'])
 def inner():
     if request.method == 'POST':
-        # print(request.form)
         saved_menu = request.form
         titles = ['chapter','id','eng_name','pol_name', 'price']
         form_values = []
@@ -141,7 +140,6 @@ def inner():
                 if key == 'chapter':
                     if value not in chapters:
                         chapters.append(value)
-        print(chapters)
         return render_template("inner.html", menu=menu, chapters=chapters)
 
 

@@ -1,0 +1,84 @@
+chapter,id,eng_name,pol_name,price
+ Salad / Sałatki,1,Veg Salad,Sałatka warzywna,10zł
+ Salad / Sałatki,2,Chicken salad,Sałatka z kurczaka,12zł
+Hot soup / Gorąca zupa,3, Mushroom Palak soup,Zupa pieczarkowo-szpinakowa,10zł
+Hot soup / Gorąca zupa,4, Tom yum veg soup,Zupa wegetariańska z dodatkiem trawy cytrynowej,10zł
+Hot soup / Gorąca zupa,5, Tom yum chicken soup,Zupa z kurczaka z dodatkiem trawy cytrynowej,12zł
+Hot soup / Gorąca zupa,6, Tom yum prawn soup,Zupa krewetkowa z dodatkiem trawy cytrynowej,17zł
+Veg and Nonveg Snacks / Przekąski Wegetariańskie i Niewegetariańskie,7, Samosa,Kruche pierożki nadziewane ziemniakami i groszkiem 2 szt,10zł
+Veg and Nonveg Snacks / Przekąski Wegetariańskie i Niewegetariańskie,8, Paneer pakora,Smażony panierowany biały ser po nepalsku,12zł
+Veg and Nonveg Snacks / Przekąski Wegetariańskie i Niewegetariańskie,9, Vegetable pakora,Smażone panierowane krążki warzywne,10zł
+Veg and Nonveg Snacks / Przekąski Wegetariańskie i Niewegetariańskie,10, Macha pakora,Smażone marynowane kawałki ryby,12zł
+Vege dishes / Potrawy wegetariańskie z ryżem,11, Dal-Mix fry,Zielona i czerwona soczewica gotowana w przyprawie nepalskiej,20zł
+Vege dishes / Potrawy wegetariańskie z ryżem,12, Pokhara vegetable,Mieszanka warzyw i kawałki białego sera w sosie śmietanowo-orzechowym (nerkowce),22zł
+Vege dishes / Potrawy wegetariańskie z ryżem,13, Lumbini vegetable kadai,Mieszanka warzyw i kawałki białego sera w sosie curry,20zł
+Vege dishes / Potrawy wegetariańskie z ryżem,14, Gorkha chana masala,Cieciorka w sosie curry,20zł
+Vege dishes / Potrawy wegetariańskie z ryżem,15, Aloo dhorpatan,Gotowane ziemniaki w pikantnych przyprawach,18zł
+Vege dishes / Potrawy wegetariańskie z ryżem,16, Paneer shashlik,Kawałki białego sera z papryką i cebulą,25zł
+Vege dishes / Potrawy wegetariańskie z ryżem,17, Palak Paneer,Kawałki białego sera ze szpinakiem,22zł
+Vege dishes / Potrawy wegetariańskie z ryżem,18, Paneer makhni,Kawałki białego sera w sosie pomidorowym na maśle,25zł
+Vege dishes / Potrawy wegetariańskie z ryżem,19, Methi paneer,Ser z liśćmi kozieradki,23zł
+Vege dishes / Potrawy wegetariańskie z ryżem,20, Lumbini paneer,Kawałki białego sera w sosie curry,21zł
+Vege dishes / Potrawy wegetariańskie z ryżem,21, Paneer wami,Kawałki białego sera z warzywami,22zł
+Vege dishes / Potrawy wegetariańskie z ryżem,22, Paneer parwali,"Kawałki białego sera z cebulą, papryką i świeżym zielonym chilli",22zł
+Non Vegetarian Dishes / Potrawy niewegetariańskie z ryżem,23, Lakhali sag kukhuro,Szpinak i kawałki kurczaka w sosie curry,20zł
+Non Vegetarian Dishes / Potrawy niewegetariańskie z ryżem,24, Methi kukhuro,Kawałki kurczaka z liśćmi kozieradki,20zł
+Non Vegetarian Dishes / Potrawy niewegetariańskie z ryżem,25, Gheeu kukhuro butter chicken,Kawałki kurczaka w maśle i sosie pomidorowym,24zł
+Non Vegetarian Dishes / Potrawy niewegetariańskie z ryżem,26, Kukhuro wami,Kawałki kurczaka z warzywami w sosie curry,22zł
+Non Vegetarian Dishes / Potrawy niewegetariańskie z ryżem,27, Haledo kukhuro,Kawałki kurczaka w sosie śmietanowym z orzechami,24zł
+Non Vegetarian Dishes / Potrawy niewegetariańskie z ryżem,28, Lasuni kukhuro curry,Kawałki kurczaka o smaku czosnkowym w sosie curry,22zł
+Non Vegetarian Dishes / Potrawy niewegetariańskie z ryżem,29, Paruwali kukhuro,Kawałki kurczaka z cebulą i świeżym zielonym chilli,20zł
+Non Vegetarian Dishes / Potrawy niewegetariańskie z ryżem,30, Kukhura ko masu,Kawałki kurczaka w sosie curry,20zł
+Lamb dishes with with Rice / dania z jagnięciny z ryżem,31, Pokhara kaju mutton,Jagnięcina w sosie śmietanowym z orzechami nerkowca,25zł
+Lamb dishes with with Rice / dania z jagnięciny z ryżem,32, Gosht sag lakhali,Kawałki jagnięciny ze szpinakiem w sosie curry,25zł
+Lamb dishes with with Rice / dania z jagnięciny z ryżem,33, Parwali masu,"Kawałki jagnięciny z cebulą, papryką i świeżym zielonym chilli",25zł
+Dishes with Fish & Seafood / Ryby i owoce morza,34, Macha ko jhol,Kawałki ryby w sosie curry,22zł
+Dishes with Fish & Seafood / Ryby i owoce morza,35, Prawn wami,Krewetki z warzywami w sosie curry,25zł
+Biryani / Potrawy ze smażonym ryżem,36, Veg Biryani,Biryani wegetariańskie,20zł
+Biryani / Potrawy ze smażonym ryżem,*65, Chicken Biryani,Biryani z kurczakiem,25zł
+Biryani / Potrawy ze smażonym ryżem,*66, Mutton Biryani,Biryani z baraniną,30zł
+Special order (wait 20 min) / Specjalne zamówienie (należy czekać 20 min),37, Chilli chicken,Kawałki kurczaka obtaczane z czosnkiem i chilli,25zł
+Special order (wait 20 min) / Specjalne zamówienie (należy czekać 20 min),38, Chicken basil,Kurczak z dodatkiem  liści bazylii w łagodnych przyprawach tajskich,25zł
+Special order (wait 20 min) / Specjalne zamówienie (należy czekać 20 min),39, Veg fried rice,Smażony ryż basmati z warzywami,20zł
+Special order (wait 20 min) / Specjalne zamówienie (należy czekać 20 min),*67, Chicken fried rice,Smażony ryż basmati z kurczakiem,22zł
+Special order (wait 20 min) / Specjalne zamówienie (należy czekać 20 min),40, Chow min Veg,makaron z warzywami,18zł
+Special order (wait 20 min) / Specjalne zamówienie (należy czekać 20 min),*68, Chow min Chicken,Makaron gotowany z kurczakiem,20zł
+Special order (wait 20 min) / Specjalne zamówienie (należy czekać 20 min),41, Chilli paneer,Kawałki sera obtaczane z czosnkiem i chilli,25zł
+Special order (wait 20 min) / Specjalne zamówienie (należy czekać 20 min),42, Duck with basil leaves,Kaczka z liśćmi bazylii w łagodnych przyprawach tajskich,35zł
+Special order (wait 20 min) / Specjalne zamówienie (należy czekać 20 min),43,Golden prawn,Krewetki tygrysie marynowane w tajskich przyprawach,35zł
+Dodatki,44, Garlic Roti,Placek z czosnkiem,7zł
+Dodatki,45, Chapati,Chleb z mąki pszennej,5zł
+Dodatki,46, Aloo Parantha,,8zł
+Dodatki,47, Panner Parantha,,10zł
+Dodatki,48, Basmati Plain Rice,Gotowany ryż basmati po nepalsku,6zł
+Dodatki,49, Lemon Rice,Smażony ryż basmati z gorczycą i sokiem z limonki,10zł
+Dodatki,50, Jeera Rice,Smażony ryż basmati,8zł
+Rolls / Rolowane,51, Chicken roll,Kurczak wrap z warzywami,15zł
+Rolls / Rolowane,52, Veg roll,Wrap z warzywami,12zł
+Hot and cold drinks / Gorące i zimne napoje,53, Hot Milk tea,Herbata z mlekiem,6zł
+Hot and cold drinks / Gorące i zimne napoje,54, Hot Milk coffee,Kawa z mlekiem,7zł
+Hot and cold drinks / Gorące i zimne napoje,55, Cold Mango Lassi,300 ml,8zł
+Hot and cold drinks / Gorące i zimne napoje,56, Cold Salty Lassi,300 ml,6zł
+Hot and cold drinks / Gorące i zimne napoje,58, Cold Cocount Mango Lassi,300 ml,10zł
+Hot and cold drinks / Gorące i zimne napoje,59, Pepsi,500 ml,5zł
+Hot and cold drinks / Gorące i zimne napoje,60, 7Up,500 ml,4zł
+Hot and cold drinks / Gorące i zimne napoje,61, Lipton,500 ml,4zł
+Hot and cold drinks / Gorące i zimne napoje,62, Woda,500 ml,4zł
+Desserts / Desery,63, Gulab Jamun,2 szt,6zł
+Desserts / Desery,64, Mango Kulfi,Deser z mango,5zł
+Polecamy,69,Nepalise speciality- MoMo dumplings with meat filling (10 pcs),nepalskie pierożki z mięsnym nadzieniem (10 szt),20zł
+Polecamy,70,Lamb Methi Malai,Baranina w sosie śmietanowym z orzechami i kozieradką,28zł
+Polecamy,71,Chicken Tikka Masala,"Kawałki kurczaka z cebulą, pomidorami w sosie z pikantnymi przyprawami",24zł
+Polecamy,72,Paneer Methi malai,Biały ser w sosie śmietanowym z orzechami i kozieradką,25zł
+Polecamy,73,Lamb curry,"Gotowane kawałki baraniny z cebulą, pomidorami w sosie curry",25zł
+Polecamy,74,Mutton Masala,"Kawałki baraniny z cebulą, pomidorami w sosie z pikantnymi przyprawami",25zł
+Polecamy,75,Chicken Methi Malai,,25zł
+Polecamy,76,Chicken 99,smażone panierowane kawałki kurczaka w ostrym sosie pomidorowym,25zł
+Polecamy,77,Red Lamb Curry,jagnięcina w czerwonym tajskim curry,30zł
+Polecamy,78,Red Prawn curry,krewetki w czerwonym tajskim curry,35zł
+Polecamy,79,Achari Gost,baranina w kwaśnym sosie curry,25zł
+Polecamy,80,Papadam,(2szt),6zł
+Polecamy,83,Chicken Mint,Kawałki kurczaka w curry miętowym,24zł
+Polecamy,84,Panner Tikka Masala,Kawałki sera z cebulą w ostrym sosie pomidorowym,25zł
+Polecamy,85,Panner Mint,Kawałki sera w ostrym sosie miętowym,25zł
+Polecamy,86,Lamb Mint,Baranina w sosie miętowym curry,28zł

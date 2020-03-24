@@ -83,9 +83,10 @@
 {#		forms starts#}
         <!-- first form strats -->
         <form action="backup" method="post">
-            <button type="submit">Get Origin Menu</button>
+            <button onclick="confirm('This will reload menu from backup file. Do you want to proceed?')" type="submit">Get Origin Menu</button>
         </form>
         <!-- second form strats -->
+        <h4> Current Menu </h4>
         <form action="inner.html" method="post">
             <ul id="myformlist">
             <button type="submit">Save all changes</button>
