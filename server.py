@@ -133,13 +133,15 @@ def inner():
             item = dict(position)
             menu.append(item)
 
-        menu_full = connection.reader_csv("menu_list.csv")
-        chapters = []
-        for item in menu_full:
-            for key, value in item.items():
-                if key == 'chapter':
-                    if value not in chapters:
-                        chapters.append(value)
+        chapters=[]
+        saved_chapters = connection.reader_csv("chapters.csv")
+        for row in saved_chapters:
+            chapters_dict = dict(row)
+
+        for key, value in chapters_dict.items():
+            chapters.append(value)
+        print(chapters)
+
         return render_template("inner.html", menu=menu, chapters=chapters)
 
 

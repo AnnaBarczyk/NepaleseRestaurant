@@ -8,8 +8,8 @@ DATA_HEADER = ['chapter', 'id', 'eng_name', 'pol_name', 'price']
 
 
 def reader_csv(filename):
-    user_stories = csv.DictReader(open(filename))
-    return user_stories
+    rows = csv.DictReader(open(filename))
+    return rows
 
 
 def writer(requests):
