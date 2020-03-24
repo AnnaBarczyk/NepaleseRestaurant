@@ -77,13 +77,15 @@ def menu():
         item = dict(position)
         menu.append(item)
 
-    menu_full = connection.reader_csv("menu_list.csv")
+    chapters = []
+    saved_chapters = connection.reader_csv("chapters.csv")
+    for row in saved_chapters:
+        chapters_dict = dict(row)
 
-    for item in menu_full:
-        for key, value in item.items():
-            if key == 'chapter':
-                if value not in chapters:
-                    chapters.append(value)
+    for key, value in chapters_dict.items():
+            chapters.append(value)
+
+
 
     chapters_col_1 = chapters[0:5]
     chapters_col_2 = chapters[6:13]
@@ -139,8 +141,10 @@ def inner():
             chapters_dict = dict(row)
 
         for key, value in chapters_dict.items():
-            chapters.append(value)
-        print(chapters)
+            if value != None:
+                chapters.append(value)
+            else:
+                continue
 
         return render_template("inner.html", menu=menu, chapters=chapters)
 
@@ -155,13 +159,17 @@ def load_backup_menu():
             item = dict(position)
             menu.append(item)
 
-        menu_full = connection.reader_csv("menu_list.csv")
-        chapters = []
-        for item in menu_full:
-            for key, value in item.items():
-                if key == 'chapter':
-                    if value not in chapters:
-                        chapters.append(value)
+        chapters=[]
+        saved_chapters = connection.reader_csv("chapters.csv")
+        for row in saved_chapters:
+            chapters_dict = dict(row)
+
+        for key, value in chapters_dict.items():
+            if value != None:
+                chapters.append(value)
+            else:
+                continue
+
         return render_template("inner.html", menu=menu, chapters=chapters)
 
 

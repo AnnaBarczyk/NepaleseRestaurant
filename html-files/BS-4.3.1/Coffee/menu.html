@@ -185,8 +185,9 @@
 					<div class="col-md-4 col-sm-12">
                         <!-- Our Menu List #1 Starts -->
                         {% for chapter in chapters_col_1 %}
+                            {% if chapter != None %}
                         <h3 class="main-heading-1 text-center text-uppercase text-weight-bold">{{  chapter }}</h3>
-
+                            {% endif %}
                             <ul class="list-unstyled our-menu-list two">
                             {% for item in menu %}
                                 {%  if item['chapter'] == chapter %}
@@ -194,11 +195,11 @@
                                     <h6 class="our-menu-list-title clearfix">
                                         {%  for key, value in item.items() %}
                                             {% if key == 'id' and item['chapter'] == chapter %}
-                                                <span class="text-weight-light float-left text-uppercase">{{ value }}.{{ item['eng_name'] }}</span>
-{#                                            {% elif key == 'eng_name' and item['chapter'] == chapter%}#}
-{#                                                <span class="text-weight-light float-left text-uppercase">{{ value }}</span>#}
-{#                                            {%  elif key == 'price' and item['chapter'] == chapter %}#}
-                                                <span class="text-weight-normal float-right text-right">{{ item['price'] }}</span>
+                                                <span class="text-weight-light float-left text-uppercase">{{ value }}.</span>
+                                            {% elif key == 'eng_name' and item['chapter'] == chapter%}
+                                                <span class="text-weight-light float-left text-uppercase">{{ value }}</span>
+                                            {%  elif key == 'price' and item['chapter'] == chapter %}
+                                                <span class="text-weight-normal float-right text-right">{{ value }}</span>
                                             {% endif %}
                                             {% endfor %}
                                     </h6>
@@ -226,8 +227,9 @@
 					<div class="col-md-4 col-sm-12">
                         <!-- Our Menu List #2 Starts -->
                         {% for chapter in chapters_col_2 %}
+                             {% if chapter != None %}
                         <h3 class="main-heading-1 text-center text-uppercase text-weight-bold">{{  chapter }}</h3>
-
+                             {%  endif %}
                             <ul class="list-unstyled our-menu-list two">
                             {% for item in menu %}
                                 {%  if item['chapter'] == chapter %}
@@ -267,8 +269,9 @@
 					<div class="col-md-4 col-sm-12">
                         <!-- Our Menu List #3 Starts -->
                         {% for chapter in chapters_col_3 %}
+                             {% if chapter != None %}
                         <h3 class="main-heading-1 text-center text-uppercase text-weight-bold">{{  chapter }}</h3>
-
+                            {% endif %}
                             <ul class="list-unstyled our-menu-list two">
                             {% for item in menu %}
                                 {%  if item['chapter'] == chapter %}
