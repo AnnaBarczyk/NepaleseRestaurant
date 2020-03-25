@@ -74,61 +74,22 @@
 			</nav>
 		<!-- Navbar Ends -->
 		<!-- Page Heading Starts -->
-			<h1 class="page-heading"><span>Strona serwisowa / Inner Page</span></h1>
+			<h1 class="page-heading"><span>Login</span></h1>
         <!-- Page Heading Ends -->
 		</header>
 	<!-- Header Wrap Ends -->
 	<!-- Main Container Starts -->
-    <div class="main-container inner">
-		<div class="edit">
+    <form action="/login" method="POST">
 
-{#  logout starts #}
-        <form action="logout.html">
-            <button class="btn-primary" type="submit">Logout</button>
-        </form><br>
-{#  logout ends #}
+        Username:<br>
+        <input type="text" name="user_name" required></input><br>
+        Password:<br>
+        <input type="password" name="password" required></input><br>
+        <button type="submit">Login</button>
 
-{#		forms starts#}
-        <!-- first form strats -->
-        <form action="backup" method="post">
-            <button class="btn-primary" onclick="confirm('This will reload menu from backup file. Do you want to proceed?')" type="submit">Get Origin Menu</button>
-        </form>
-        <br>
-        <!-- second form strats -->
-        <h4> Current Menu </h4>
-        <form class="form-group" action="inner.html" method="post">
-            <ul id="myformlist">
-            <button class="btn-outline-dark" type="submit">Save all changes</button>
-            {% for position in menu %}
-                <li>
-                {%  for key, value in position.items() %}
-                    {% if key == 'chapter' %}
-                        Chapter: <select class="chapters" name="{{ key }}{{ position['id'] }}">
-                        {%  for chapter in chapters %}
-                            {%  if chapter == value %}
-                                  <option selected="selected" value="{{chapter}}">{{ chapter }}</option>
-                            {% else %}
-                                  <option value="{{chapter}}">{{ chapter }}</option>
-                            {%  endif %}
-                        {% endfor %}
-                         </select>
-                     {% elif key =='id' %}
-                         {{ key }}: <input type="text"  class="{{ key }} myform" autofocus name="{{ key }}{{ position['id'] }}"  value="{{ value }}">
-                    {% elif key =='price' %}
-                         {{ key }}: <input type="text"  class="{{ key }} myform" autofocus name="{{ key }}{{ position['id'] }}"  value="{{ value }}">
-                        <button type='button' onclick="AddRow({{ menu.index(position)}})" class="{{ menu.index(position)}} add btn-twitter">New Row</button>
-                        <button type='button' onclick="DeleteRow(this.parentElement)" class="{{ menu.index(position)}} delete btn-twitter">Delete</button>
-                    {% else %}
-                        {{ key }}: <input type="text" class="myform" autofocus name="{{ key }}{{ position['id'] }}"  value="{{ value }}">
-                    {% endif %}
-                    {%  endfor %}
-                </li>
-            {%  endfor %}
-            </ul>
-        <button class="edit end btn-outline-dark" type="submit">Save all changes</button>
-        </form>
-		</div>
-    </div>
+        <p>{{ login_message }}</p>
+
+    </form>
 	<!-- Main Container Ends -->
 
 

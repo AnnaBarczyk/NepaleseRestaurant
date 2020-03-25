@@ -1,14 +1,13 @@
 import os, json
 from flask_mail import Mail, Message
-from flask import Flask, render_template, request, flash, redirect, url_for, jsonify
+from flask import Flask, render_template, request, flash, redirect, url_for, jsonify, session
 
 import connection
 
-
 # TODO: change path to absolute for all users
 
-template_dir = os.path.abspath('/home/ubuntu/Desktop/Nepal/html-files/BS-4.3.1/Coffee')
-STATIC_DIR = os.path.abspath('/home/ubuntu/Desktop/Nepal/html-files/BS-4.3.1/Coffee')
+template_dir = os.path.abspath('/home/anna/Codecool/Indyjskie/Nepal/html-files/BS-4.3.1/Coffee')
+STATIC_DIR = os.path.abspath('/home/anna/Codecool/Indyjskie/Nepal/html-files/BS-4.3.1/Coffee')
 app = Flask(__name__, template_folder=template_dir, static_folder=STATIC_DIR)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
@@ -34,7 +33,41 @@ def route_list():
     if all_settings["indexTodaySpecialMenu"] == 'show':
         sections_to_show.append('indexTodaySpecialMenu')
 
-    return render_template("index.html", sections_to_show=sections_to_show )
+    return render_template("index.html", sections_to_show=sections_to_show)
+
+
+@app.route('/login', methods=["GET", "POST"])
+def login():
+    if 'username' in session:
+        return redirect(url_for('inner'))
+    else:
+        if request.method == "POST":
+            username_to_check = request.form['user_name']
+            password_to_check = request.form['password']
+
+            admin_username = 'admin'
+            admin_password = 'password'
+
+            if username_to_check != admin_username or password_to_check != admin_password:
+                login_message = 'Username or password incorrect. Please try again.'
+                return render_template('login.html', login_message=login_message)
+            else:
+                session['username'] = admin_username
+                return redirect(url_for("inner"))
+        if 'username' in session:
+            return render_template("login.html", username=session["username"])
+        else:
+            return render_template("login.html")
+
+
+@app.route('/logout.html', methods=["GET", "POST"])
+def logout():
+    if 'username' in session:
+        session.pop('username', None)
+        return redirect(url_for('inner'))
+    else:
+        return redirect(url_for('inner'))
+
 
 @app.route('/contact.html', methods=["GET", "POST"])
 def contact():
@@ -66,8 +99,6 @@ def menu():
     if all_settings["menuMain"] == 'show':
         sections_to_show.append('menuMain')
 
-
-    # titles = ['chapter','id','eng_name','pol_name','price']
     chapters = []
 
     menu_full = connection.reader_csv("menu_list.csv")
@@ -83,15 +114,15 @@ def menu():
         chapters_dict = dict(row)
 
     for key, value in chapters_dict.items():
-            chapters.append(value)
-
-
+        chapters.append(value)
 
     chapters_col_1 = chapters[0:5]
     chapters_col_2 = chapters[6:13]
     chapters_col_3 = chapters[13:]
 
-    return render_template("menu.html", menu=menu, chapters_col_1=chapters_col_1, chapters_col_2=chapters_col_2, chapters_col_3=chapters_col_3, sections_to_show=sections_to_show)
+    return render_template("menu.html", menu=menu, chapters_col_1=chapters_col_1, chapters_col_2=chapters_col_2,
+                           chapters_col_3=chapters_col_3, sections_to_show=sections_to_show)
+
 
 @app.route('/about.html')
 def about():
@@ -106,47 +137,50 @@ def about():
 
     return render_template("about.html", sections_to_show=sections_to_show)
 
+
 @app.route('/inner.html', methods=['POST', 'GET'])
 def inner():
-    if request.method == 'POST':
-        saved_menu = request.form
-        titles = ['chapter','id','eng_name','pol_name', 'price']
-        form_values = []
-        menu_to_csv = []
+    if 'username' in session:
+        if request.method == 'POST':
+            saved_menu = request.form
+            titles = ['chapter', 'id', 'eng_name', 'pol_name', 'price']
+            form_values = []
+            menu_to_csv = []
 
-        for value in saved_menu.values():
-            form_values.append(value)
+            for value in saved_menu.values():
+                form_values.append(value)
 
-        menu_values_in_row = [form_values[i:i + len(titles)] for i in range(0, len(form_values), len(titles))]
+            menu_values_in_row = [form_values[i:i + len(titles)] for i in range(0, len(form_values), len(titles))]
 
-        for row in menu_values_in_row:
-            dict_row = dict(zip(titles, row))
-            menu_to_csv.append(dict_row)
+            for row in menu_values_in_row:
+                dict_row = dict(zip(titles, row))
+                menu_to_csv.append(dict_row)
 
+            connection.writer(menu_to_csv)
 
-        connection.writer(menu_to_csv)
+            return redirect(url_for('menu'))
+        else:
+            menu_full = connection.reader_csv("menu_list.csv")
 
-        return redirect(url_for('menu'))
+            menu_inner = []
+            for position in menu_full:
+                item = dict(position)
+                menu_inner.append(item)
+
+            chapters = []
+            saved_chapters = connection.reader_csv("chapters.csv")
+            for row in saved_chapters:
+                chapters_dict = dict(row)
+
+            for key, value in chapters_dict.items():
+                if value is not None:
+                    chapters.append(value)
+                else:
+                    continue
+
+            return render_template("inner.html", menu=menu_inner, chapters=chapters)
     else:
-        menu_full = connection.reader_csv("menu_list.csv")
-
-        menu = []
-        for position in menu_full:
-            item = dict(position)
-            menu.append(item)
-
-        chapters=[]
-        saved_chapters = connection.reader_csv("chapters.csv")
-        for row in saved_chapters:
-            chapters_dict = dict(row)
-
-        for key, value in chapters_dict.items():
-            if value != None:
-                chapters.append(value)
-            else:
-                continue
-
-        return render_template("inner.html", menu=menu, chapters=chapters)
+        return redirect(url_for('login'))
 
 
 @app.route('/backup', methods=['POST', 'GET'])
@@ -154,28 +188,23 @@ def load_backup_menu():
     if request.method == 'POST':
         menu_full = connection.reader_csv("menu_list_backup.csv")
 
-        menu = []
+        menu_inner = []
         for position in menu_full:
             item = dict(position)
-            menu.append(item)
+            menu_inner.append(item)
 
-        chapters=[]
+        chapters = []
         saved_chapters = connection.reader_csv("chapters.csv")
         for row in saved_chapters:
             chapters_dict = dict(row)
 
         for key, value in chapters_dict.items():
-            if value != None:
+            if value is not None:
                 chapters.append(value)
             else:
                 continue
 
-        return render_template("inner.html", menu=menu, chapters=chapters)
-
-
-
-
-
+        return render_template("inner.html", menu=menu_inner, chapters=chapters)
 
 
 if __name__ == '__main__':
