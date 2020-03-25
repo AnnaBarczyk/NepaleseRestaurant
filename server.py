@@ -6,8 +6,8 @@ import connection
 
 # TODO: change path to absolute for all users
 
-template_dir = os.path.abspath('/home/anna/Codecool/Indyjskie/Nepal/html-files/BS-4.3.1/Coffee')
-STATIC_DIR = os.path.abspath('/home/anna/Codecool/Indyjskie/Nepal/html-files/BS-4.3.1/Coffee')
+template_dir = os.path.abspath('Static')
+STATIC_DIR = os.path.abspath('Static')
 app = Flask(__name__, template_folder=template_dir, static_folder=STATIC_DIR)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
