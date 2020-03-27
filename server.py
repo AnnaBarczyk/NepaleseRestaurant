@@ -1,6 +1,6 @@
-import os, json
+import os
 from flask_mail import Mail, Message
-from flask import Flask, render_template, request, flash, redirect, url_for, jsonify, session
+from flask import Flask, render_template, request, flash, redirect, url_for, session
 
 import connection
 

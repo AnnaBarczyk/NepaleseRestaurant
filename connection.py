@@ -1,6 +1,5 @@
 import csv
 import os
-from collections import OrderedDict
 import json
 
 DATA_FILE_PATH = os.getenv('DATA_FILE_PATH') if 'DATA_FILE_PATH' in os.environ else 'menu_list.csv'
