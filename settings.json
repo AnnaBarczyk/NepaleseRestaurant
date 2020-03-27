@@ -3,12 +3,12 @@
 
     "indexTopSlider": "unableToDelete",
     "indexIntroSection": "show",
-    "indexTodaySpecialMenu": "show",
+    "indexTodaySpecialMenu": "hide",
 
     "aboutIntroSection": "show",
     "aboutTestimonialSection": "show",
     "aboutStaffSection": "show",
 
-    "menuLunch": "show",
+    "menuLunch": "hide",
     "menuMain": "show"
 }

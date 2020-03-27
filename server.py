@@ -46,7 +46,7 @@ def login():
             password_to_check = request.form['password']
 
             admin_username = 'admin'
-            admin_password = 'password'
+            admin_password = '$j&_2!KJDS9qErMf'
 
             if username_to_check != admin_username or password_to_check != admin_password:
                 login_message = 'Username or password incorrect. Please try again.'
