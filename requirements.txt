@@ -110,7 +110,7 @@ PyYAML==5.1.2
 pyzmq==18.1.0
 qtconsole==4.5.5
 reportlab==3.5.23
-requests==2.19.1
+requests==2.20.0
 requests-unixsocket==0.1.5
 rope==0.14.0
 SecretStorage==2.3.1
